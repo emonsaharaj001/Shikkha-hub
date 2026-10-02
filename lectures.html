@@ -1,0 +1,284 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lecture Management | শিক্ষা হাব</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="lectures-page">
+
+  <div class="lectures-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="lectures-sidebar">
+      <a href="index.html" class="lectures-brand">
+        <span class="lectures-logo">শি</span>
+        <span class="lectures-brand-text">
+          <strong>শিক্ষা হাব</strong>
+          <small>Learn Smarter</small>
+        </span>
+      </a>
+
+      <div class="lectures-profile">
+        <div class="lectures-avatar">ER</div>
+        <div>
+          <strong>Emon Saha Raj</strong>
+          <small>Administrator</small>
+        </div>
+      </div>
+
+      <nav class="lectures-nav">
+        <p class="lectures-nav-label">MAIN MENU</p>
+
+        <a href="admin-dashboard.html" class="lectures-nav-link">
+          <span>▦</span> Dashboard
+        </a>
+        <a href="subjects.html" class="lectures-nav-link">
+          <span>▤</span> Subjects
+        </a>
+        <a href="courses.html" class="lectures-nav-link">
+          <span>▣</span> Courses
+        </a>
+        <a href="lectures.html" class="lectures-nav-link active">
+          <span>▶</span> Lectures
+        </a>
+        <a href="teacher-dashboard.html" class="lectures-nav-link">
+          <span>♙</span> Teachers
+        </a>
+        <a href="student-dashboard.html" class="lectures-nav-link">
+          <span>♧</span> Students
+        </a>
+
+        <p class="lectures-nav-label">ACCOUNT</p>
+
+        <a href="teacher-profile.html" class="lectures-nav-link">
+          <span>◎</span> My Profile
+        </a>
+        <a href="login.html" class="lectures-nav-link">
+          <span>↪</span> Logout
+        </a>
+      </nav>
+
+      <div class="lectures-sidebar-bottom">
+        <div class="lectures-help-icon">?</div>
+        <div>
+          <strong>Need help?</strong>
+          <small>Contact support</small>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="lectures-main">
+
+      <!-- TOPBAR -->
+      <header class="lectures-topbar">
+        <div>
+          <p class="lectures-eyebrow">CONTENT MANAGEMENT</p>
+          <h1>Lecture Management</h1>
+          <p class="lectures-subtitle">
+            Organize, publish and manage your learning materials.
+          </p>
+        </div>
+
+        <div class="lectures-top-actions">
+          <button class="lectures-icon-btn" type="button" aria-label="Notifications">♧</button>
+          <div class="lectures-top-user">
+            <div class="lectures-top-avatar">ER</div>
+            <div>
+              <strong>Emon Saha Raj</strong>
+              <small>Admin</small>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- SUMMARY CARDS -->
+      <section class="lectures-stats">
+        <article class="lectures-stat-card">
+          <div class="lectures-stat-icon purple">▶</div>
+          <div>
+            <p>Total Lectures</p>
+            <h2>48</h2>
+            <small>Across all courses</small>
+          </div>
+        </article>
+
+        <article class="lectures-stat-card">
+          <div class="lectures-stat-icon green">✓</div>
+          <div>
+            <p>Published</p>
+            <h2>36</h2>
+            <small>Available to students</small>
+          </div>
+        </article>
+
+        <article class="lectures-stat-card">
+          <div class="lectures-stat-icon orange">◷</div>
+          <div>
+            <p>Drafts</p>
+            <h2>08</h2>
+            <small>Waiting to be published</small>
+          </div>
+        </article>
+
+        <article class="lectures-stat-card">
+          <div class="lectures-stat-icon blue">♧</div>
+          <div>
+            <p>Total Views</p>
+            <h2>2,450</h2>
+            <small>Student lecture views</small>
+          </div>
+        </article>
+      </section>
+
+      <!-- LECTURE TOOLBAR -->
+      <section class="lectures-content">
+
+        <div class="lectures-section-heading">
+          <div>
+            <h2>All Lectures</h2>
+            <p>View and manage your course lectures.</p>
+          </div>
+
+          <button class="lectures-add-btn" type="button">
+            <span>＋</span> Add New Lecture
+          </button>
+        </div>
+
+        <!-- SEARCH AND FILTER -->
+        <div class="lectures-toolbar">
+          <div class="lectures-search">
+            <span>⌕</span>
+            <input type="search" placeholder="Search lectures..." aria-label="Search lectures">
+          </div>
+
+          <select aria-label="Filter by subject">
+            <option value="">All Subjects</option>
+            <option>HSC ICT</option>
+            <option>English</option>
+            <option>Dua</option>
+            <option>Programming</option>
+          </select>
+
+          <select aria-label="Filter by status">
+            <option value="">All Status</option>
+            <option>Published</option>
+            <option>Draft</option>
+            <option>Pending</option>
+          </select>
+        </div>
+
+        <!-- LECTURE LIST -->
+        <div class="lectures-list">
+
+          <article class="lecture-item">
+            <div class="lecture-thumbnail ict">
+              <span>▶</span>
+              <small>18:25</small>
+            </div>
+            <div class="lecture-info">
+              <span class="lecture-category">HSC ICT</span>
+              <h3>Introduction to Information Technology</h3>
+              <p>ICT Fundamentals · Chapter 01</p>
+              <div class="lecture-meta">
+                <span>♙ Emon Saha Raj</span>
+                <span>◷ Sep 25, 2026</span>
+                <span>◉ 320 views</span>
+              </div>
+            </div>
+            <div class="lecture-status published">Published</div>
+            <button class="lecture-more" type="button" aria-label="More options">•••</button>
+          </article>
+
+          <article class="lecture-item">
+            <div class="lecture-thumbnail english">
+              <span>▶</span>
+              <small>24:10</small>
+            </div>
+            <div class="lecture-info">
+              <span class="lecture-category">English</span>
+              <h3>Basic English Grammar</h3>
+              <p>English Grammar · Lesson 02</p>
+              <div class="lecture-meta">
+                <span>♙ Bithe Sarker</span>
+                <span>◷ Sep 23, 2026</span>
+                <span>◉ 215 views</span>
+              </div>
+            </div>
+            <div class="lecture-status published">Published</div>
+            <button class="lecture-more" type="button" aria-label="More options">•••</button>
+          </article>
+
+          <article class="lecture-item">
+            <div class="lecture-thumbnail dua">
+              <span>▶</span>
+              <small>12:40</small>
+            </div>
+            <div class="lecture-info">
+              <span class="lecture-category">Dua</span>
+              <h3>Daily Essential Dua</h3>
+              <p>Daily Dua · Lesson 01</p>
+              <div class="lecture-meta">
+                <span>♙ Emon Saha Raj</span>
+                <span>◷ Sep 20, 2026</span>
+                <span>◉ 180 views</span>
+              </div>
+            </div>
+            <div class="lecture-status draft">Draft</div>
+            <button class="lecture-more" type="button" aria-label="More options">•••</button>
+          </article>
+
+          <article class="lecture-item">
+            <div class="lecture-thumbnail programming">
+              <span>▶</span>
+              <small>32:15</small>
+            </div>
+            <div class="lecture-info">
+              <span class="lecture-category">Programming</span>
+              <h3>Introduction to JavaScript</h3>
+              <p>Programming Basics · Lesson 03</p>
+              <div class="lecture-meta">
+                <span>♙ Bithe Sarker</span>
+                <span>◷ Sep 18, 2026</span>
+                <span>◉ 145 views</span>
+              </div>
+            </div>
+            <div class="lecture-status pending">Pending</div>
+            <button class="lecture-more" type="button" aria-label="More options">•••</button>
+          </article>
+
+        </div>
+
+        <!-- PAGINATION -->
+        <div class="lectures-pagination">
+          <p>Showing <strong>1–4</strong> of <strong>48</strong> lectures</p>
+          <div class="lectures-page-buttons">
+            <button type="button" disabled>←</button>
+            <button type="button" class="current">1</button>
+            <button type="button">2</button>
+            <button type="button">3</button>
+            <button type="button">→</button>
+          </div>
+        </div>
+
+      </section>
+
+      <footer class="lectures-footer">
+        © 2026 শিক্ষা হাব. All rights reserved.
+      </footer>
+
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

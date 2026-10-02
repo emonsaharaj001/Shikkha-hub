@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Dashboard | শিক্ষা হাব</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dashboard-page">
+
+    <!-- =========================================
+         DASHBOARD
+    ========================================== -->
+
+    <div class="dashboard-layout">
+
+
+        <!-- =====================================
+             SIDEBAR
+        ====================================== -->
+
+        <aside class="dashboard-sidebar">
+
+            <!-- LOGO -->
+
+            <a href="index.html" class="dashboard-logo">
+
+                <div class="dashboard-logo-box">
+                    শি
+                </div>
+
+                <div>
+                    <strong>শিক্ষা হাব</strong>
+                    <span>Learn Smarter</span>
+                </div>
+
+            </a>
+
+
+            <!-- STUDENT PROFILE -->
+
+            <div class="sidebar-profile">
+
+                <div class="student-avatar" id="sidebarAvatar">
+                    E
+                </div>
+
+                <div>
+                    <strong class="student-name">
+                        Student
+                    </strong>
+
+                    <span>Student</span>
+                </div>
+
+            </div>
+
+
+            <!-- NAVIGATION -->
+
+            <nav class="dashboard-nav">
+
+                <p class="nav-title">
+                    MAIN MENU
+                </p>
+
+                <a href="#" class="dashboard-nav-link active">
+                    <span>⌂</span>
+                    Dashboard
+                </a>
+
+                <a href="#" class="dashboard-nav-link">
+                    <span>📚</span>
+                    My Courses
+                </a>
+
+                <a href="#" class="dashboard-nav-link">
+                    <span>📖</span>
+                    Subjects
+                </a>
+
+                <a href="#" class="dashboard-nav-link">
+                    <span>👨‍🏫</span>
+                    My Teachers
+                </a>
+
+
+                <p class="nav-title second-title">
+                    LEARNING
+                </p>
+
+                <a href="#" class="dashboard-nav-link">
+                    <span>📊</span>
+                    Progress
+                </a>
+
+                <a href="#" class="dashboard-nav-link">
+                    <span>✅</span>
+                    Completed
+                </a>
+
+                <a href="#" class="dashboard-nav-link">
+                    <span>📝</span>
+                    Results
+                </a>
+
+
+                <p class="nav-title second-title">
+                    ACCOUNT
+                </p>
+
+                <a href="#" class="dashboard-nav-link">
+                    <span>⚙️</span>
+                    Settings
+                </a>
+
+            </nav>
+
+
+            <!-- LOGOUT -->
+
+            <a href="login.html" class="dashboard-logout" id="logoutBtn">
+
+                <span>↪</span>
+
+                Logout
+
+            </a>
+
+        </aside>
+
+
+
+        <!-- =====================================
+             MAIN CONTENT
+        ====================================== -->
+
+        <main class="dashboard-main">
+
+
+            <!-- TOP BAR -->
+
+            <header class="dashboard-topbar">
+
+                <div>
+
+                    <p class="dashboard-greeting">
+                        Good Morning 👋
+                    </p>
+
+                    <h1>
+                        Welcome back,
+                        <span class="student-name">Student</span>!
+                    </h1>
+
+                </div>
+
+
+                <div class="dashboard-actions">
+
+                    <button class="notification-btn">
+                        🔔
+                        <span></span>
+                    </button>
+
+
+                    <div class="topbar-user">
+
+                        <div class="topbar-avatar" id="topbarAvatar">
+                            E
+                        </div>
+
+                        <div>
+
+                            <strong class="student-name">
+                                Student
+                            </strong>
+
+                            <small>Student</small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- =================================
+                 OVERVIEW CARDS
+            ================================== -->
+
+            <section class="dashboard-overview">
+
+                <div class="overview-card">
+
+                    <div class="overview-icon purple">
+                        📚
+                    </div>
+
+                    <div>
+                        <span>Total Courses</span>
+                        <strong>04</strong>
+                    </div>
+
+                    <small>
+                        Active courses
+                    </small>
+
+                </div>
+
+
+                <div class="overview-card">
+
+                    <div class="overview-icon green">
+                        ✅
+                    </div>
+
+                    <div>
+                        <span>Completed</span>
+                        <strong>08</strong>
+                    </div>
+
+                    <small>
+                        Lectures completed
+                    </small>
+
+                </div>
+
+
+                <div class="overview-card">
+
+                    <div class="overview-icon orange">
+                        📈
+                    </div>
+
+                    <div>
+                        <span>Progress</span>
+                        <strong>72%</strong>
+                    </div>
+
+                    <small>
+                        Weekly learning
+                    </small>
+
+                </div>
+
+
+                <div class="overview-card">
+
+                    <div class="overview-icon blue">
+                        🎯
+                    </div>
+
+                    <div>
+                        <span>Activities</span>
+                        <strong>12</strong>
+                    </div>
+
+                    <small>
+                        This month
+                    </small>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================
+                 CONTENT GRID
+            ================================== -->
+
+            <section class="dashboard-content-grid">
+
+
+                <!-- MY COURSES -->
+
+                <div class="dashboard-section courses-section">
+
+                    <div class="section-heading">
+
+                        <div>
+
+                            <span class="section-label">
+                                LEARNING
+                            </span>
+
+                            <h2>
+                                My Courses
+                            </h2>
+
+                        </div>
+
+                        <a href="#">
+                            View All →
+                        </a>
+
+                    </div>
+
+
+                    <div class="course-list">
+
+
+                        <!-- COURSE 1 -->
+
+                        <div class="course-card">
+
+                            <div class="course-icon">
+                                ICT
+                            </div>
+
+                            <div class="course-info">
+
+                                <span>
+                                    HSC • ICT
+                                </span>
+
+                                <h3>
+                                    Information & Communication Technology
+                                </h3>
+
+                                <div class="course-progress">
+
+                                    <div class="progress-track">
+
+                                        <div
+                                            class="progress-fill"
+                                            style="width: 78%;">
+                                        </div>
+
+                                    </div>
+
+                                    <strong>
+                                        78%
+                                    </strong>
+
+                                </div>
+
+                                <small>
+                                    14 of 18 lectures completed
+                                </small>
+
+                            </div>
+
+                            <button class="continue-btn">
+                                Continue →
+                            </button>
+
+                        </div>
+
+
+
+                        <!-- COURSE 2 -->
+
+                        <div class="course-card">
+
+                            <div class="course-icon english">
+                                EN
+                            </div>
+
+                            <div class="course-info">
+
+                                <span>
+                                    HSC • English
+                                </span>
+
+                                <h3>
+                                    English Language & Grammar
+                                </h3>
+
+                                <div class="course-progress">
+
+                                    <div class="progress-track">
+
+                                        <div
+                                            class="progress-fill"
+                                            style="width: 64%;">
+                                        </div>
+
+                                    </div>
+
+                                    <strong>
+                                        64%
+                                    </strong>
+
+                                </div>
+
+                                <small>
+                                    08 of 12 lectures completed
+                                </small>
+
+                            </div>
+
+                            <button class="continue-btn">
+                                Continue →
+                            </button>
+
+                        </div>
+
+
+
+                        <!-- COURSE 3 -->
+
+                        <div class="course-card">
+
+                            <div class="course-icon math">
+                                ✦
+                            </div>
+
+                            <div class="course-info">
+
+                                <span>
+                                    HSC • Mathematics
+                                </span>
+
+                                <h3>
+                                    Higher Mathematics
+                                </h3>
+
+                                <div class="course-progress">
+
+                                    <div class="progress-track">
+
+                                        <div
+                                            class="progress-fill"
+                                            style="width: 45%;">
+                                        </div>
+
+                                    </div>
+
+                                    <strong>
+                                        45%
+                                    </strong>
+
+                                </div>
+
+                                <small>
+                                    05 of 11 lectures completed
+                                </small>
+
+                            </div>
+
+                            <button class="continue-btn">
+                                Continue →
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- RIGHT COLUMN -->
+
+                <div class="dashboard-right-column">
+
+
+                    <!-- WEEKLY PROGRESS -->
+
+                    <div class="dashboard-section weekly-section">
+
+                        <div class="section-heading">
+
+                            <div>
+
+                                <span class="section-label">
+                                    OVERVIEW
+                                </span>
+
+                                <h2>
+                                    Weekly Progress
+                                </h2>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="weekly-progress">
+
+                            <div class="progress-circle">
+
+                                <div>
+
+                                    <strong>72%</strong>
+
+                                    <span>
+                                        Complete
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                            <p>
+                                Great progress! Keep learning
+                                consistently.
+                            </p>
+
+                        </div>
+
+
+                        <div class="weekly-stats">
+
+                            <div>
+                                <strong>12</strong>
+                                <span>Lectures</span>
+                            </div>
+
+                            <div>
+                                <strong>08</strong>
+                                <span>Completed</span>
+                            </div>
+
+                            <div>
+                                <strong>04</strong>
+                                <span>Remaining</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- RECENT ACTIVITY -->
+
+                    <div class="dashboard-section activity-section">
+
+                        <div class="section-heading">
+
+                            <div>
+
+                                <span class="section-label">
+                                    ACTIVITY
+                                </span>
+
+                                <h2>
+                                    Recent Activity
+                                </h2>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="activity-list">
+
+                            <div class="activity-item">
+
+                                <div class="activity-icon">
+                                    ✓
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        ICT Lecture Completed
+                                    </strong>
+
+                                    <span>
+                                        2 hours ago
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="activity-item">
+
+                                <div class="activity-icon">
+                                    📖
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        English Lesson Started
+                                    </strong>
+
+                                    <span>
+                                        Yesterday
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="activity-item">
+
+                                <div class="activity-icon">
+                                    🎯
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Weekly Goal Achieved
+                                    </strong>
+
+                                    <span>
+                                        2 days ago
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================
+                 TEACHERS
+            ================================== -->
+
+            <section class="dashboard-section teachers-dashboard-section">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-label">
+                            YOUR MENTORS
+                        </span>
+
+                        <h2>
+                            My Teachers
+                        </h2>
+
+                    </div>
+
+                    <a href="#">
+                        View All →
+                    </a>
+
+                </div>
+
+
+                <div class="teacher-mini-grid">
+
+
+                    <div class="teacher-mini-card">
+
+                        <div class="teacher-mini-avatar">
+                            MR
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Mathematics Teacher
+                            </strong>
+
+                            <span>
+                                Mathematics
+                            </span>
+
+                        </div>
+
+                        <button>
+                            View
+                        </button>
+
+                    </div>
+
+
+                    <div class="teacher-mini-card">
+
+                        <div class="teacher-mini-avatar">
+                            IS
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                ICT Teacher
+                            </strong>
+
+                            <span>
+                                ICT & Technology
+                            </span>
+
+                        </div>
+
+                        <button>
+                            View
+                        </button>
+
+                    </div>
+
+
+                    <div class="teacher-mini-card">
+
+                        <div class="teacher-mini-avatar">
+                            EA
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                English Teacher
+                            </strong>
+
+                            <span>
+                                English
+                            </span>
+
+                        </div>
+
+                        <button>
+                            View
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+
+    <!-- =========================================
+         STUDENT DASHBOARD SCRIPT
+    ========================================== -->
+
+    <script>
+
+        // Get logged-in student data
+        const studentData = localStorage.getItem("student");
+
+
+        // If user is not logged in
+        if (!studentData) {
+
+            window.location.href = "login.html";
+
+        } else {
+
+            try {
+
+                const student = JSON.parse(studentData);
+
+                console.log(
+                    "Logged-in student:",
+                    student
+                );
+
+
+                // Student name
+                const studentName =
+                    student.name || "Student";
+
+
+                // Put student's name everywhere
+                const studentNameElements =
+                    document.querySelectorAll(
+                        ".student-name"
+                    );
+
+
+                studentNameElements.forEach(
+                    element => {
+
+                        element.textContent =
+                            studentName;
+
+                    }
+                );
+
+
+                // Get first letter for avatar
+                const avatarLetter =
+                    studentName
+                        .charAt(0)
+                        .toUpperCase();
+
+
+                const sidebarAvatar =
+                    document.getElementById(
+                        "sidebarAvatar"
+                    );
+
+
+                const topbarAvatar =
+                    document.getElementById(
+                        "topbarAvatar"
+                    );
+
+
+                if (sidebarAvatar) {
+
+                    sidebarAvatar.textContent =
+                        avatarLetter;
+
+                }
+
+
+                if (topbarAvatar) {
+
+                    topbarAvatar.textContent =
+                        avatarLetter;
+
+                }
+
+
+            } catch (error) {
+
+                console.error(
+                    "Student data error:",
+                    error
+                );
+
+                localStorage.removeItem(
+                    "student"
+                );
+
+                window.location.href =
+                    "login.html";
+            }
+
+        }
+
+
+        // Logout
+        const logoutBtn =
+            document.getElementById("logoutBtn");
+
+
+        if (logoutBtn) {
+
+            logoutBtn.addEventListener(
+                "click",
+                function () {
+
+                    localStorage.removeItem(
+                        "student"
+                    );
+
+                }
+            );
+
+        }
+
+    </script>
+
+</body>
+
+</html>

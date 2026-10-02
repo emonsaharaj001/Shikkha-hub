@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Subjects | শিক্ষা হাব</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="subjects-page">
+
+    <div class="subjects-layout">
+
+        <!-- Sidebar -->
+        <aside class="subjects-sidebar">
+
+            <div class="subjects-brand">
+                <div class="subjects-logo">শি</div>
+
+                <div>
+                    <h2>শিক্ষা হাব</h2>
+                    <span>Learn Smarter</span>
+                </div>
+            </div>
+
+            <nav class="subjects-menu">
+
+                <a href="index.html">
+                    <span>⌂</span>
+                    Home
+                </a>
+
+                <a href="student-dashboard.html">
+                    <span>▣</span>
+                    Dashboard
+                </a>
+
+                <a href="subjects.html" class="active">
+                    <span>📚</span>
+                    Subjects
+                </a>
+
+                <a href="#">
+                    <span>◫</span>
+                    Courses
+                </a>
+
+                <a href="#">
+                    <span>▶</span>
+                    Lectures
+                </a>
+
+                <a href="#">
+                    <span>👨‍🏫</span>
+                    Teachers
+                </a>
+
+                <a href="#">
+                    <span>⚙</span>
+                    Settings
+                </a>
+
+            </nav>
+
+            <div class="subjects-sidebar-bottom">
+
+                <div class="subjects-help-box">
+                    <strong>Need Help?</strong>
+                    <p>Have a question about your learning?</p>
+                    <button type="button">Get Support</button>
+                </div>
+
+                <a href="login.html" class="subjects-logout">
+                    <span>↪</span>
+                    Logout
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- Main Content -->
+        <main class="subjects-main">
+
+            <!-- Topbar -->
+            <header class="subjects-topbar">
+
+                <div>
+                    <p class="subjects-eyebrow">LEARNING PLATFORM</p>
+                    <h1>Subjects</h1>
+                    <p class="subjects-subtitle">
+                        Explore your subjects and start learning smarter.
+                    </p>
+                </div>
+
+                <div class="subjects-top-actions">
+
+                    <button class="subjects-notification" type="button">
+                        🔔
+                        <span></span>
+                    </button>
+
+                    <div class="subjects-user">
+                        <div class="subjects-user-avatar">ER</div>
+
+                        <div>
+                            <strong>Emon Raj</strong>
+                            <small>Student</small>
+                        </div>
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- Search / Filter -->
+            <section class="subjects-toolbar">
+
+                <div class="subjects-search">
+                    <span>⌕</span>
+                    <input
+                        type="text"
+                        placeholder="Search subjects..."
+                    >
+                </div>
+
+                <div class="subjects-filter">
+
+                    <button class="subjects-filter-btn active">
+                        All Subjects
+                    </button>
+
+                    <button class="subjects-filter-btn">
+                        HSC
+                    </button>
+
+                    <button class="subjects-filter-btn">
+                        English
+                    </button>
+
+                    <button class="subjects-filter-btn">
+                        Others
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- Subject Overview -->
+            <section class="subjects-overview">
+
+                <div class="subjects-overview-text">
+                    <span class="subjects-small-label">YOUR LEARNING</span>
+
+                    <h2>Choose a subject and begin your journey.</h2>
+
+                    <p>
+                        Learn from structured courses, experienced teachers,
+                        and organized lectures designed for your progress.
+                    </p>
+                </div>
+
+                <div class="subjects-overview-stats">
+
+                    <div>
+                        <strong>04</strong>
+                        <span>Subjects</span>
+                    </div>
+
+                    <div>
+                        <strong>12</strong>
+                        <span>Courses</span>
+                    </div>
+
+                    <div>
+                        <strong>48+</strong>
+                        <span>Lectures</span>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Subject Cards -->
+            <section class="subjects-section">
+
+                <div class="subjects-section-heading">
+
+                    <div>
+                        <span class="subjects-small-label">
+                            AVAILABLE SUBJECTS
+                        </span>
+
+                        <h2>Explore Subjects</h2>
+                    </div>
+
+                    <button class="subjects-add-btn" type="button">
+                        + Add Subject
+                    </button>
+
+                </div>
+
+
+                <div class="subjects-grid">
+
+
+                    <!-- HSC ICT -->
+                    <article class="subject-card">
+
+                        <div class="subject-card-top">
+
+                            <div class="subject-icon subject-icon-blue">
+                                💻
+                            </div>
+
+                            <span class="subject-badge">
+                                HSC
+                            </span>
+
+                        </div>
+
+                        <h3>HSC ICT</h3>
+
+                        <p>
+                            Learn Information and Communication Technology
+                            with structured lessons and practical concepts.
+                        </p>
+
+                        <div class="subject-meta">
+
+                            <span>📖 04 Courses</span>
+                            <span>▶ 18 Lectures</span>
+
+                        </div>
+
+                        <div class="subject-teacher">
+
+                            <div class="subject-teacher-avatar">
+                                TR
+                            </div>
+
+                            <div>
+                                <small>Teacher</small>
+                                <strong>Tanvir Rahman</strong>
+                            </div>
+
+                        </div>
+
+                        <button class="subject-view-btn">
+                            View Subject →
+                        </button>
+
+                    </article>
+
+
+                    <!-- English -->
+                    <article class="subject-card">
+
+                        <div class="subject-card-top">
+
+                            <div class="subject-icon subject-icon-purple">
+                                ✍️
+                            </div>
+
+                            <span class="subject-badge">
+                                LANGUAGE
+                            </span>
+
+                        </div>
+
+                        <h3>English</h3>
+
+                        <p>
+                            Improve grammar, writing, vocabulary and communication
+                            through guided lessons.
+                        </p>
+
+                        <div class="subject-meta">
+
+                            <span>📖 03 Courses</span>
+                            <span>▶ 12 Lectures</span>
+
+                        </div>
+
+                        <div class="subject-teacher">
+
+                            <div class="subject-teacher-avatar">
+                                SA
+                            </div>
+
+                            <div>
+                                <small>Teacher</small>
+                                <strong>Sarah Ahmed</strong>
+                            </div>
+
+                        </div>
+
+                        <button class="subject-view-btn">
+                            View Subject →
+                        </button>
+
+                    </article>
+
+
+                    <!-- Dua -->
+                    <article class="subject-card">
+
+                        <div class="subject-card-top">
+
+                            <div class="subject-icon subject-icon-green">
+                                ☪
+                            </div>
+
+                            <span class="subject-badge">
+                                RELIGIOUS
+                            </span>
+
+                        </div>
+
+                        <h3>Dua</h3>
+
+                        <p>
+                            Learn essential duas with simple explanations,
+                            meanings and daily practice.
+                        </p>
+
+                        <div class="subject-meta">
+
+                            <span>📖 02 Courses</span>
+                            <span>▶ 08 Lectures</span>
+
+                        </div>
+
+                        <div class="subject-teacher">
+
+                            <div class="subject-teacher-avatar">
+                                MA
+                            </div>
+
+                            <div>
+                                <small>Teacher</small>
+                                <strong>Md. Arif Hasan</strong>
+                            </div>
+
+                        </div>
+
+                        <button class="subject-view-btn">
+                            View Subject →
+                        </button>
+
+                    </article>
+
+
+                    <!-- Programming -->
+                    <article class="subject-card">
+
+                        <div class="subject-card-top">
+
+                            <div class="subject-icon subject-icon-orange">
+                                &lt;/&gt;
+                            </div>
+
+                            <span class="subject-badge">
+                                SKILL
+                            </span>
+
+                        </div>
+
+                        <h3>Programming</h3>
+
+                        <p>
+                            Build programming fundamentals through practical
+                            coding lessons and problem solving.
+                        </p>
+
+                        <div class="subject-meta">
+
+                            <span>📖 03 Courses</span>
+                            <span>▶ 10 Lectures</span>
+
+                        </div>
+
+                        <div class="subject-teacher">
+
+                            <div class="subject-teacher-avatar">
+                                ER
+                            </div>
+
+                            <div>
+                                <small>Teacher</small>
+                                <strong>Emon Raj</strong>
+                            </div>
+
+                        </div>
+
+                        <button class="subject-view-btn">
+                            View Subject →
+                        </button>
+
+                    </article>
+
+
+                </div>
+
+            </section>
+
+
+            <!-- Footer -->
+            <footer class="subjects-footer">
+                <p>© 2026 শিক্ষা হাব — Learn Smarter</p>
+
+                <div>
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Help</a>
+                </div>
+            </footer>
+
+        </main>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

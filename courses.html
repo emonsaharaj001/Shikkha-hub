@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Courses | শিক্ষা হাব</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="courses-page">
+
+    <div class="courses-layout">
+
+        <!-- Sidebar -->
+        <aside class="courses-sidebar">
+
+            <div class="courses-brand">
+                <div class="courses-logo">শি</div>
+
+                <div>
+                    <h2>শিক্ষা হাব</h2>
+                    <span>Learn Smarter</span>
+                </div>
+            </div>
+
+
+            <!-- Navigation -->
+            <nav class="courses-menu">
+
+                <a href="index.html">
+                    <span>⌂</span>
+                    Home
+                </a>
+
+                <a href="student-dashboard.html">
+                    <span>▣</span>
+                    Dashboard
+                </a>
+
+                <a href="subjects.html">
+                    <span>📚</span>
+                    Subjects
+                </a>
+
+                <a href="courses.html" class="active">
+                    <span>◫</span>
+                    Courses
+                </a>
+
+                <a href="#">
+                    <span>▶</span>
+                    Lectures
+                </a>
+
+                <a href="#">
+                    <span>👨‍🏫</span>
+                    Teachers
+                </a>
+
+                <a href="#">
+                    <span>⚙</span>
+                    Settings
+                </a>
+
+            </nav>
+
+
+            <!-- Sidebar Bottom -->
+            <div class="courses-sidebar-bottom">
+
+                <div class="courses-help-box">
+                    <strong>Need Help?</strong>
+
+                    <p>
+                        Have a question about your learning?
+                    </p>
+
+                    <button type="button">
+                        Get Support
+                    </button>
+                </div>
+
+                <a href="login.html" class="courses-logout">
+                    <span>↪</span>
+                    Logout
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- Main Content -->
+        <main class="courses-main">
+
+
+            <!-- Topbar -->
+            <header class="courses-topbar">
+
+                <div>
+
+                    <p class="courses-eyebrow">
+                        LEARNING PLATFORM
+                    </p>
+
+                    <h1>Courses</h1>
+
+                    <p class="courses-subtitle">
+                        Explore structured courses and learn at your own pace.
+                    </p>
+
+                </div>
+
+
+                <div class="courses-top-actions">
+
+                    <button
+                        class="courses-notification"
+                        type="button"
+                        aria-label="Notifications"
+                    >
+                        🔔
+                        <span></span>
+                    </button>
+
+
+                    <div class="courses-user">
+
+                        <div class="courses-user-avatar">
+                            ER
+                        </div>
+
+                        <div>
+                            <strong>Emon Raj</strong>
+                            <small>Student</small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- Course Toolbar -->
+            <section class="courses-toolbar">
+
+                <div class="courses-search">
+
+                    <span>⌕</span>
+
+                    <input
+                        type="text"
+                        placeholder="Search courses..."
+                    >
+
+                </div>
+
+
+                <div class="courses-filter">
+
+                    <button
+                        class="courses-filter-btn active"
+                        type="button"
+                    >
+                        All Courses
+                    </button>
+
+                    <button
+                        class="courses-filter-btn"
+                        type="button"
+                    >
+                        HSC ICT
+                    </button>
+
+                    <button
+                        class="courses-filter-btn"
+                        type="button"
+                    >
+                        English
+                    </button>
+
+                    <button
+                        class="courses-filter-btn"
+                        type="button"
+                    >
+                        Dua
+                    </button>
+
+                    <button
+                        class="courses-filter-btn"
+                        type="button"
+                    >
+                        Programming
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- Course Overview -->
+            <section class="courses-overview">
+
+                <div class="courses-overview-text">
+
+                    <span class="courses-small-label">
+                        YOUR LEARNING
+                    </span>
+
+                    <h2>
+                        Build your skills one course at a time.
+                    </h2>
+
+                    <p>
+                        Follow structured courses, complete lectures,
+                        and keep track of your learning journey.
+                    </p>
+
+                </div>
+
+
+                <div class="courses-overview-stats">
+
+                    <div>
+                        <strong>12</strong>
+                        <span>Courses</span>
+                    </div>
+
+                    <div>
+                        <strong>48+</strong>
+                        <span>Lectures</span>
+                    </div>
+
+                    <div>
+                        <strong>04</strong>
+                        <span>Subjects</span>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Course Section -->
+            <section class="courses-section">
+
+
+                <div class="courses-section-heading">
+
+                    <div>
+
+                        <span class="courses-small-label">
+                            AVAILABLE COURSES
+                        </span>
+
+                        <h2>
+                            Explore Courses
+                        </h2>
+
+                    </div>
+
+
+                    <button
+                        class="courses-add-btn"
+                        type="button"
+                    >
+                        + Add Course
+                    </button>
+
+                </div>
+
+
+                <!-- Course Grid -->
+                <div class="courses-grid">
+
+
+                    <!-- Course 01 -->
+                    <article class="course-card">
+
+                        <div class="course-card-top">
+
+                            <div class="course-icon course-icon-blue">
+                                💻
+                            </div>
+
+                            <span class="course-status">
+                                ACTIVE
+                            </span>
+
+                        </div>
+
+
+                        <span class="course-subject">
+                            HSC ICT
+                        </span>
+
+                        <h3>
+                            ICT Fundamentals
+                        </h3>
+
+                        <p>
+                            Build a strong foundation in ICT concepts,
+                            digital systems and important HSC topics.
+                        </p>
+
+
+                        <div class="course-info">
+
+                            <span>
+                                📖 06 Lectures
+                            </span>
+
+                            <span>
+                                👥 24 Students
+                            </span>
+
+                        </div>
+
+
+                        <div class="course-progress">
+
+                            <div class="course-progress-header">
+
+                                <span>
+                                    Your Progress
+                                </span>
+
+                                <strong>
+                                    72%
+                                </strong>
+
+                            </div>
+
+                            <div class="course-progress-bar">
+                                <span style="width: 72%;"></span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="course-teacher">
+
+                            <div class="course-teacher-avatar">
+                                TR
+                            </div>
+
+                            <div>
+                                <small>Instructor</small>
+                                <strong>Tanvir Rahman</strong>
+                            </div>
+
+                        </div>
+
+
+                        <button
+                            class="course-view-btn"
+                            type="button"
+                        >
+                            View Course →
+                        </button>
+
+                    </article>
+
+
+                    <!-- Course 02 -->
+                    <article class="course-card">
+
+                        <div class="course-card-top">
+
+                            <div class="course-icon course-icon-purple">
+                                ✍️
+                            </div>
+
+                            <span class="course-status">
+                                ACTIVE
+                            </span>
+
+                        </div>
+
+
+                        <span class="course-subject">
+                            ENGLISH
+                        </span>
+
+                        <h3>
+                            English Grammar
+                        </h3>
+
+                        <p>
+                            Improve grammar skills with clear explanations,
+                            examples and practical exercises.
+                        </p>
+
+
+                        <div class="course-info">
+
+                            <span>
+                                📖 05 Lectures
+                            </span>
+
+                            <span>
+                                👥 31 Students
+                            </span>
+
+                        </div>
+
+
+                        <div class="course-progress">
+
+                            <div class="course-progress-header">
+
+                                <span>
+                                    Your Progress
+                                </span>
+
+                                <strong>
+                                    58%
+                                </strong>
+
+                            </div>
+
+                            <div class="course-progress-bar">
+                                <span style="width: 58%;"></span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="course-teacher">
+
+                            <div class="course-teacher-avatar">
+                                SA
+                            </div>
+
+                            <div>
+                                <small>Instructor</small>
+                                <strong>Sarah Ahmed</strong>
+                            </div>
+
+                        </div>
+
+
+                        <button
+                            class="course-view-btn"
+                            type="button"
+                        >
+                            View Course →
+                        </button>
+
+                    </article>
+
+
+                    <!-- Course 03 -->
+                    <article class="course-card">
+
+                        <div class="course-card-top">
+
+                            <div class="course-icon course-icon-green">
+                                ☪
+                            </div>
+
+                            <span class="course-status">
+                                ACTIVE
+                            </span>
+
+                        </div>
+
+
+                        <span class="course-subject">
+                            DUA
+                        </span>
+
+                        <h3>
+                            Daily Essential Dua
+                        </h3>
+
+                        <p>
+                            Learn important daily duas with meanings,
+                            pronunciation and practical guidance.
+                        </p>
+
+
+                        <div class="course-info">
+
+                            <span>
+                                📖 04 Lectures
+                            </span>
+
+                            <span>
+                                👥 18 Students
+                            </span>
+
+                        </div>
+
+
+                        <div class="course-progress">
+
+                            <div class="course-progress-header">
+
+                                <span>
+                                    Your Progress
+                                </span>
+
+                                <strong>
+                                    84%
+                                </strong>
+
+                            </div>
+
+                            <div class="course-progress-bar">
+                                <span style="width: 84%;"></span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="course-teacher">
+
+                            <div class="course-teacher-avatar">
+                                MA
+                            </div>
+
+                            <div>
+                                <small>Instructor</small>
+                                <strong>Md. Arif Hasan</strong>
+                            </div>
+
+                        </div>
+
+
+                        <button
+                            class="course-view-btn"
+                            type="button"
+                        >
+                            View Course →
+                        </button>
+
+                    </article>
+
+
+                    <!-- Course 04 -->
+                    <article class="course-card">
+
+                        <div class="course-card-top">
+
+                            <div class="course-icon course-icon-orange">
+                                &lt;/&gt;
+                            </div>
+
+                            <span class="course-status">
+                                ACTIVE
+                            </span>
+
+                        </div>
+
+
+                        <span class="course-subject">
+                            PROGRAMMING
+                        </span>
+
+                        <h3>
+                            Programming Basics
+                        </h3>
+
+                        <p>
+                            Start programming from the fundamentals and
+                            develop practical problem-solving skills.
+                        </p>
+
+
+                        <div class="course-info">
+
+                            <span>
+                                📖 08 Lectures
+                            </span>
+
+                            <span>
+                                👥 16 Students
+                            </span>
+
+                        </div>
+
+
+                        <div class="course-progress">
+
+                            <div class="course-progress-header">
+
+                                <span>
+                                    Your Progress
+                                </span>
+
+                                <strong>
+                                    46%
+                                </strong>
+
+                            </div>
+
+                            <div class="course-progress-bar">
+                                <span style="width: 46%;"></span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="course-teacher">
+
+                            <div class="course-teacher-avatar">
+                                ER
+                            </div>
+
+                            <div>
+                                <small>Instructor</small>
+                                <strong>Emon Raj</strong>
+                            </div>
+
+                        </div>
+
+
+                        <button
+                            class="course-view-btn"
+                            type="button"
+                        >
+                            View Course →
+                        </button>
+
+                    </article>
+
+
+                    <!-- Course 05 -->
+                    <article class="course-card">
+
+                        <div class="course-card-top">
+
+                            <div class="course-icon course-icon-blue">
+                                🧠
+                            </div>
+
+                            <span class="course-status">
+                                NEW
+                            </span>
+
+                        </div>
+
+
+                        <span class="course-subject">
+                            HSC ICT
+                        </span>
+
+                        <h3>
+                            Database Management
+                        </h3>
+
+                        <p>
+                            Understand database concepts, SQL basics,
+                            tables, relationships and practical queries.
+                        </p>
+
+
+                        <div class="course-info">
+
+                            <span>
+                                📖 07 Lectures
+                            </span>
+
+                            <span>
+                                👥 12 Students
+                            </span>
+
+                        </div>
+
+
+                        <div class="course-progress">
+
+                            <div class="course-progress-header">
+
+                                <span>
+                                    Your Progress
+                                </span>
+
+                                <strong>
+                                    24%
+                                </strong>
+
+                            </div>
+
+                            <div class="course-progress-bar">
+                                <span style="width: 24%;"></span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="course-teacher">
+
+                            <div class="course-teacher-avatar">
+                                TR
+                            </div>
+
+                            <div>
+                                <small>Instructor</small>
+                                <strong>Tanvir Rahman</strong>
+                            </div>
+
+                        </div>
+
+
+                        <button
+                            class="course-view-btn"
+                            type="button"
+                        >
+                            View Course →
+                        </button>
+
+                    </article>
+
+
+                    <!-- Course 06 -->
+                    <article class="course-card">
+
+                        <div class="course-card-top">
+
+                            <div class="course-icon course-icon-purple">
+                                🗣️
+                            </div>
+
+                            <span class="course-status">
+                                NEW
+                            </span>
+
+                        </div>
+
+
+                        <span class="course-subject">
+                            ENGLISH
+                        </span>
+
+                        <h3>
+                            Spoken English
+                        </h3>
+
+                        <p>
+                            Improve everyday English speaking, vocabulary
+                            and confident communication.
+                        </p>
+
+
+                        <div class="course-info">
+
+                            <span>
+                                📖 06 Lectures
+                            </span>
+
+                            <span>
+                                👥 20 Students
+                            </span>
+
+                        </div>
+
+
+                        <div class="course-progress">
+
+                            <div class="course-progress-header">
+
+                                <span>
+                                    Your Progress
+                                </span>
+
+                                <strong>
+                                    35%
+                                </strong>
+
+                            </div>
+
+                            <div class="course-progress-bar">
+                                <span style="width: 35%;"></span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="course-teacher">
+
+                            <div class="course-teacher-avatar">
+                                SA
+                            </div>
+
+                            <div>
+                                <small>Instructor</small>
+                                <strong>Sarah Ahmed</strong>
+                            </div>
+
+                        </div>
+
+
+                        <button
+                            class="course-view-btn"
+                            type="button"
+                        >
+                            View Course →
+                        </button>
+
+                    </article>
+
+
+                </div>
+
+            </section>
+
+
+            <!-- Footer -->
+            <footer class="courses-footer">
+
+                <p>
+                    © 2026 শিক্ষা হাব — Learn Smarter
+                </p>
+
+                <div>
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Help</a>
+                </div>
+
+            </footer>
+
+        </main>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

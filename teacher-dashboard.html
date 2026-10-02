@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Teacher Dashboard | শিক্ষা হাব</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dashboard-page teacher-dashboard-page">
+
+    <div class="dashboard-layout">
+
+
+        <!-- =====================================
+             SIDEBAR
+        ====================================== -->
+
+        <aside class="dashboard-sidebar">
+
+            <!-- LOGO -->
+
+            <a href="index.html" class="dashboard-logo">
+
+                <div class="dashboard-logo-box">
+                    শি
+                </div>
+
+                <div>
+                    <strong>শিক্ষা হাব</strong>
+                    <span>Learn Smarter</span>
+                </div>
+
+            </a>
+
+
+            <!-- TEACHER PROFILE -->
+
+            <div class="sidebar-profile">
+
+                <div class="student-avatar">
+                    T
+                </div>
+
+                <div>
+                    <strong>Teacher Name</strong>
+                    <span>Teacher</span>
+                </div>
+
+            </div>
+
+
+            <!-- NAVIGATION -->
+
+            <nav class="dashboard-nav">
+
+                <p class="nav-title">
+                    MAIN MENU
+                </p>
+
+                <a href="#" class="dashboard-nav-link active">
+                    <span>⌂</span>
+                    Dashboard
+                </a>
+
+                <a href="#" class="dashboard-nav-link">
+                    <span>📚</span>
+                    My Courses
+                </a>
+
+                <a href="#" class="dashboard-nav-link">
+                    <span>📖</span>
+                    My Subjects
+                </a>
+
+                <a href="#" class="dashboard-nav-link">
+                    <span>👨‍🎓</span>
+                    My Students
+                </a>
+
+
+                <p class="nav-title second-title">
+                    TEACHING
+                </p>
+
+                <a href="#" class="dashboard-nav-link">
+                    <span>🎥</span>
+                    Lectures
+                </a>
+
+                <a href="#" class="dashboard-nav-link">
+                    <span>📊</span>
+                    Student Progress
+                </a>
+
+                <a href="#" class="dashboard-nav-link">
+                    <span>📝</span>
+                    Results
+                </a>
+
+
+                <p class="nav-title second-title">
+                    ACCOUNT
+                </p>
+
+                <a href="#" class="dashboard-nav-link">
+                    <span>👤</span>
+                    My Profile
+                </a>
+
+                <a href="#" class="dashboard-nav-link">
+                    <span>⚙️</span>
+                    Settings
+                </a>
+
+            </nav>
+
+
+            <!-- LOGOUT -->
+
+            <a href="login.html" class="dashboard-logout">
+
+                <span>↪</span>
+
+                Logout
+
+            </a>
+
+        </aside>
+
+
+
+        <!-- =====================================
+             MAIN CONTENT
+        ====================================== -->
+
+        <main class="dashboard-main">
+
+
+            <!-- TOP BAR -->
+
+            <header class="dashboard-topbar">
+
+                <div>
+
+                    <p class="dashboard-greeting">
+                        Good Morning 👋
+                    </p>
+
+                    <h1>
+                        Welcome back, Teacher!
+                    </h1>
+
+                </div>
+
+
+                <div class="dashboard-actions">
+
+                    <button class="notification-btn">
+                        🔔
+                        <span></span>
+                    </button>
+
+
+                    <div class="topbar-user">
+
+                        <div class="topbar-avatar">
+                            T
+                        </div>
+
+                        <div>
+                            <strong>
+                                Teacher Name
+                            </strong>
+
+                            <small>
+                                Teacher
+                            </small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- =================================
+                 TEACHER OVERVIEW
+            ================================== -->
+
+            <section class="dashboard-overview">
+
+
+                <!-- COURSES -->
+
+                <div class="overview-card">
+
+                    <div class="overview-icon purple">
+                        📚
+                    </div>
+
+                    <div>
+                        <span>My Courses</span>
+                        <strong>04</strong>
+                    </div>
+
+                    <small>
+                        Active courses
+                    </small>
+
+                </div>
+
+
+                <!-- STUDENTS -->
+
+                <div class="overview-card">
+
+                    <div class="overview-icon blue">
+                        👨‍🎓
+                    </div>
+
+                    <div>
+                        <span>Total Students</span>
+                        <strong>86</strong>
+                    </div>
+
+                    <small>
+                        Enrolled students
+                    </small>
+
+                </div>
+
+
+                <!-- LECTURES -->
+
+                <div class="overview-card">
+
+                    <div class="overview-icon green">
+                        🎥
+                    </div>
+
+                    <div>
+                        <span>Lectures</span>
+                        <strong>32</strong>
+                    </div>
+
+                    <small>
+                        Published lectures
+                    </small>
+
+                </div>
+
+
+                <!-- SUBJECTS -->
+
+                <div class="overview-card">
+
+                    <div class="overview-icon orange">
+                        📖
+                    </div>
+
+                    <div>
+                        <span>Subjects</span>
+                        <strong>03</strong>
+                    </div>
+
+                    <small>
+                        Teaching subjects
+                    </small>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================
+                 CONTENT GRID
+            ================================== -->
+
+            <section class="dashboard-content-grid">
+
+
+                <!-- MY COURSES -->
+
+                <div class="dashboard-section courses-section">
+
+                    <div class="section-heading">
+
+                        <div>
+
+                            <span class="section-label">
+                                TEACHING
+                            </span>
+
+                            <h2>
+                                My Courses
+                            </h2>
+
+                        </div>
+
+                        <a href="#">
+                            View All →
+                        </a>
+
+                    </div>
+
+
+                    <div class="course-list">
+
+
+                        <!-- COURSE 1 -->
+
+                        <div class="course-card">
+
+                            <div class="course-icon">
+                                ICT
+                            </div>
+
+                            <div class="course-info">
+
+                                <span>
+                                    HSC • ICT
+                                </span>
+
+                                <h3>
+                                    Information & Communication Technology
+                                </h3>
+
+                                <small>
+                                    32 Students • 12 Lectures
+                                </small>
+
+                            </div>
+
+                            <button class="continue-btn">
+                                Manage →
+                            </button>
+
+                        </div>
+
+
+
+                        <!-- COURSE 2 -->
+
+                        <div class="course-card">
+
+                            <div class="course-icon english">
+                                EN
+                            </div>
+
+                            <div class="course-info">
+
+                                <span>
+                                    HSC • English
+                                </span>
+
+                                <h3>
+                                    English Language & Grammar
+                                </h3>
+
+                                <small>
+                                    28 Students • 10 Lectures
+                                </small>
+
+                            </div>
+
+                            <button class="continue-btn">
+                                Manage →
+                            </button>
+
+                        </div>
+
+
+
+                        <!-- COURSE 3 -->
+
+                        <div class="course-card">
+
+                            <div class="course-icon math">
+                                ✦
+                            </div>
+
+                            <div class="course-info">
+
+                                <span>
+                                    HSC • Mathematics
+                                </span>
+
+                                <h3>
+                                    Higher Mathematics
+                                </h3>
+
+                                <small>
+                                    26 Students • 10 Lectures
+                                </small>
+
+                            </div>
+
+                            <button class="continue-btn">
+                                Manage →
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- RIGHT COLUMN -->
+
+                <div class="dashboard-right-column">
+
+
+                    <!-- QUICK ACTIONS -->
+
+                    <div class="dashboard-section weekly-section">
+
+                        <div class="section-heading">
+
+                            <div>
+
+                                <span class="section-label">
+                                    QUICK ACTIONS
+                                </span>
+
+                                <h2>
+                                    Manage Learning
+                                </h2>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="teacher-actions">
+
+                            <button class="teacher-action">
+                                <span>➕</span>
+                                <strong>Add Course</strong>
+                            </button>
+
+                            <button class="teacher-action">
+                                <span>🎥</span>
+                                <strong>Add Lecture</strong>
+                            </button>
+
+                            <button class="teacher-action">
+                                <span>📝</span>
+                                <strong>Add Result</strong>
+                            </button>
+
+                            <button class="teacher-action">
+                                <span>👨‍🎓</span>
+                                <strong>View Students</strong>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- RECENT ACTIVITY -->
+
+                    <div class="dashboard-section activity-section">
+
+                        <div class="section-heading">
+
+                            <div>
+
+                                <span class="section-label">
+                                    ACTIVITY
+                                </span>
+
+                                <h2>
+                                    Recent Activity
+                                </h2>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="activity-list">
+
+
+                            <div class="activity-item">
+
+                                <div class="activity-icon">
+                                    🎥
+                                </div>
+
+                                <div>
+                                    <strong>
+                                        New ICT Lecture Published
+                                    </strong>
+
+                                    <span>
+                                        2 hours ago
+                                    </span>
+                                </div>
+
+                            </div>
+
+
+                            <div class="activity-item">
+
+                                <div class="activity-icon">
+                                    👨‍🎓
+                                </div>
+
+                                <div>
+                                    <strong>
+                                        3 New Students Enrolled
+                                    </strong>
+
+                                    <span>
+                                        Yesterday
+                                    </span>
+                                </div>
+
+                            </div>
+
+
+                            <div class="activity-item">
+
+                                <div class="activity-icon">
+                                    📝
+                                </div>
+
+                                <div>
+                                    <strong>
+                                        English Result Updated
+                                    </strong>
+
+                                    <span>
+                                        2 days ago
+                                    </span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================
+                 STUDENT PROGRESS
+            ================================== -->
+
+            <section class="dashboard-section teachers-dashboard-section">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-label">
+                            STUDENT PERFORMANCE
+                        </span>
+
+                        <h2>
+                            Student Progress
+                        </h2>
+
+                    </div>
+
+                    <a href="#">
+                        View All →
+                    </a>
+
+                </div>
+
+
+                <div class="teacher-mini-grid">
+
+
+                    <div class="teacher-mini-card">
+
+                        <div class="teacher-mini-avatar">
+                            78%
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                ICT Students
+                            </strong>
+
+                            <span>
+                                Average progress
+                            </span>
+
+                        </div>
+
+                        <button>
+                            View
+                        </button>
+
+                    </div>
+
+
+                    <div class="teacher-mini-card">
+
+                        <div class="teacher-mini-avatar">
+                            72%
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                English Students
+                            </strong>
+
+                            <span>
+                                Average progress
+                            </span>
+
+                        </div>
+
+                        <button>
+                            View
+                        </button>
+
+                    </div>
+
+
+                    <div class="teacher-mini-card">
+
+                        <div class="teacher-mini-avatar">
+                            65%
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Mathematics Students
+                            </strong>
+
+                            <span>
+                                Average progress
+                            </span>
+
+                        </div>
+
+                        <button>
+                            View
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

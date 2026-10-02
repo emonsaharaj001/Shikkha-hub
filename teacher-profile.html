@@ -1,0 +1,358 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Profile | Shikkha Hub</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="teacher-profile-page">
+
+    <div class="tp-layout">
+
+        <!-- Sidebar -->
+        <aside class="tp-sidebar">
+            <a href="index.html" class="tp-brand">
+                <span class="tp-logo">শি</span>
+                <span>
+                    <strong>শিক্ষা হাব</strong>
+                    <small>Learn Smarter</small>
+                </span>
+            </a>
+
+            <div class="tp-sidebar-label">TEACHER MENU</div>
+
+            <nav class="tp-nav">
+                <a href="teacher-dashboard.html">
+                    <span>▦</span> Dashboard
+                </a>
+                <a href="teacher-dashboard.html">
+                    <span>▣</span> My Courses
+                </a>
+                <a href="teacher-dashboard.html">
+                    <span>◈</span> My Subjects
+                </a>
+                <a href="teacher-dashboard.html">
+                    <span>♙</span> My Students
+                </a>
+                <a href="teacher-dashboard.html">
+                    <span>▤</span> Lectures
+                </a>
+                <a href="teacher-dashboard.html">
+                    <span>▥</span> Student Progress
+                </a>
+                <a href="teacher-dashboard.html">
+                    <span>⚙</span> Settings
+                </a>
+            </nav>
+
+            <div class="tp-sidebar-bottom">
+                <div class="tp-help-card">
+                    <div class="tp-help-icon">✦</div>
+                    <strong>Need help?</strong>
+                    <p>Contact the Shikkha Hub admin for support.</p>
+                    <a href="mailto:support@shikkhahub.com">Get Support →</a>
+                </div>
+
+                <a href="login.html" class="tp-logout">
+                    <span>↪</span> Logout
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="tp-main">
+
+            <!-- Topbar -->
+            <header class="tp-topbar">
+                <div>
+                    <p class="tp-breadcrumb">Teacher / My Profile</p>
+                    <h1>My Profile</h1>
+                </div>
+
+                <div class="tp-top-actions">
+                    <button class="tp-notification" type="button" aria-label="Notifications">
+                        ♧
+                        <span></span>
+                    </button>
+
+                    <div class="tp-top-user">
+                        <div class="tp-small-avatar">T</div>
+                        <div>
+                            <strong>Teacher Name</strong>
+                            <small>Teacher Account</small>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Profile Banner -->
+            <section class="tp-profile-banner">
+                <div class="tp-banner-decoration tp-decoration-one"></div>
+                <div class="tp-banner-decoration tp-decoration-two"></div>
+
+                <div class="tp-profile-main">
+                    <div class="tp-avatar-wrap">
+                        <div class="tp-avatar">T</div>
+                        <span class="tp-online-dot"></span>
+                    </div>
+
+                    <div class="tp-profile-heading">
+                        <span class="tp-verified">✓ Verified Teacher</span>
+                        <h2>Teacher Name</h2>
+                        <p>ICT & English Instructor</p>
+                        <div class="tp-profile-meta">
+                            <span>⌖ Dhaka, Bangladesh</span>
+                            <span>◷ 3+ Years Experience</span>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="tp-edit-button" type="button" onclick="window.print()">
+                    ✎ Edit / Print Profile
+                </button>
+            </section>
+
+            <!-- Profile Summary -->
+            <section class="tp-summary-grid">
+                <article class="tp-summary-card">
+                    <div class="tp-summary-icon purple">▣</div>
+                    <div>
+                        <span>Total Courses</span>
+                        <strong>04</strong>
+                    </div>
+                </article>
+
+                <article class="tp-summary-card">
+                    <div class="tp-summary-icon orange">♙</div>
+                    <div>
+                        <span>Total Students</span>
+                        <strong>120</strong>
+                    </div>
+                </article>
+
+                <article class="tp-summary-card">
+                    <div class="tp-summary-icon green">▤</div>
+                    <div>
+                        <span>Lectures Published</span>
+                        <strong>36</strong>
+                    </div>
+                </article>
+
+                <article class="tp-summary-card">
+                    <div class="tp-summary-icon blue">★</div>
+                    <div>
+                        <span>Teacher Rating</span>
+                        <strong>4.8 <small>/ 5</small></strong>
+                    </div>
+                </article>
+            </section>
+
+            <!-- Profile Details -->
+            <div class="tp-content-grid">
+
+                <div class="tp-left-column">
+
+                    <!-- About -->
+                    <section class="tp-card">
+                        <div class="tp-card-header">
+                            <div>
+                                <span class="tp-section-label">INTRODUCTION</span>
+                                <h3>About Me</h3>
+                            </div>
+                            <button class="tp-text-button" type="button">Edit</button>
+                        </div>
+
+                        <p class="tp-about-text">
+                            I am a passionate educator who loves helping students
+                            understand complex topics in a simple and practical way.
+                            My goal is to make learning engaging, accessible, and
+                            effective for every student at Shikkha Hub.
+                        </p>
+                    </section>
+
+                    <!-- Education -->
+                    <section class="tp-card">
+                        <div class="tp-card-header">
+                            <div>
+                                <span class="tp-section-label">ACADEMIC BACKGROUND</span>
+                                <h3>Education & Qualifications</h3>
+                            </div>
+                            <button class="tp-text-button" type="button">+ Add</button>
+                        </div>
+
+                        <div class="tp-timeline">
+                            <div class="tp-timeline-item">
+                                <div class="tp-timeline-icon">🎓</div>
+                                <div>
+                                    <h4>Bachelor of Science in Computer Science</h4>
+                                    <p>University Name</p>
+                                    <span>Department of Computer Science & Engineering</span>
+                                    <small>2022 – 2026</small>
+                                </div>
+                            </div>
+
+                            <div class="tp-timeline-item">
+                                <div class="tp-timeline-icon">📘</div>
+                                <div>
+                                    <h4>Higher Secondary Certificate</h4>
+                                    <p>College Name</p>
+                                    <span>Science</span>
+                                    <small>2020 – 2022</small>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Experience -->
+                    <section class="tp-card">
+                        <div class="tp-card-header">
+                            <div>
+                                <span class="tp-section-label">PROFESSIONAL JOURNEY</span>
+                                <h3>Teaching Experience</h3>
+                            </div>
+                            <button class="tp-text-button" type="button">+ Add</button>
+                        </div>
+
+                        <div class="tp-experience">
+                            <div class="tp-experience-icon">✦</div>
+                            <div>
+                                <h4>ICT & English Instructor</h4>
+                                <p>Shikkha Hub · Online</p>
+                                <span>2024 – Present</span>
+                                <p class="tp-experience-description">
+                                    Conducting online classes, preparing learning
+                                    materials, and helping students improve their
+                                    academic performance.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+
+                <div class="tp-right-column">
+
+                    <!-- Subjects -->
+                    <section class="tp-card">
+                        <div class="tp-card-header">
+                            <div>
+                                <span class="tp-section-label">TEACHING AREAS</span>
+                                <h3>Subjects I Teach</h3>
+                            </div>
+                            <button class="tp-text-button" type="button">+ Add</button>
+                        </div>
+
+                        <div class="tp-subject-list">
+                            <div class="tp-subject-item">
+                                <span class="tp-subject-icon purple">⌘</span>
+                                <div>
+                                    <strong>Information & Communication Technology</strong>
+                                    <small>HSC · ICT</small>
+                                </div>
+                            </div>
+
+                            <div class="tp-subject-item">
+                                <span class="tp-subject-icon orange">文</span>
+                                <div>
+                                    <strong>English</strong>
+                                    <small>Grammar · Writing · Speaking</small>
+                                </div>
+                            </div>
+
+                            <div class="tp-subject-item">
+                                <span class="tp-subject-icon green">✧</span>
+                                <div>
+                                    <strong>Dua & Islamic Studies</strong>
+                                    <small>Basic learning</small>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Contact -->
+                    <section class="tp-card">
+                        <div class="tp-card-header">
+                            <div>
+                                <span class="tp-section-label">GET IN TOUCH</span>
+                                <h3>Contact Information</h3>
+                            </div>
+                            <button class="tp-text-button" type="button">Edit</button>
+                        </div>
+
+                        <div class="tp-contact-list">
+                            <div class="tp-contact-item">
+                                <span class="tp-contact-icon">✉</span>
+                                <div>
+                                    <small>Email Address</small>
+                                    <strong>teacher@example.com</strong>
+                                </div>
+                            </div>
+
+                            <div class="tp-contact-item">
+                                <span class="tp-contact-icon">☎</span>
+                                <div>
+                                    <small>Phone Number</small>
+                                    <strong>+880 1XXXXXXXXX</strong>
+                                </div>
+                            </div>
+
+                            <div class="tp-contact-item">
+                                <span class="tp-contact-icon">⌖</span>
+                                <div>
+                                    <small>Location</small>
+                                    <strong>Dhaka, Bangladesh</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Courses -->
+                    <section class="tp-card">
+                        <div class="tp-card-header">
+                            <div>
+                                <span class="tp-section-label">MY CONTENT</span>
+                                <h3>My Courses</h3>
+                            </div>
+                            <a href="teacher-dashboard.html" class="tp-text-button">View All →</a>
+                        </div>
+
+                        <div class="tp-course-item">
+                            <div class="tp-course-cover purple-cover">ICT</div>
+                            <div class="tp-course-info">
+                                <strong>HSC ICT Complete Course</strong>
+                                <small>12 Lectures · 68 Students</small>
+                                <span class="tp-course-status">Published</span>
+                            </div>
+                        </div>
+
+                        <div class="tp-course-item">
+                            <div class="tp-course-cover orange-cover">ENG</div>
+                            <div class="tp-course-info">
+                                <strong>English Grammar Essentials</strong>
+                                <small>08 Lectures · 52 Students</small>
+                                <span class="tp-course-status">Published</span>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+
+            <footer class="tp-footer">
+                <span>© 2026 Shikkha Hub. All rights reserved.</span>
+                <span>Learn Smarter, Grow Better.</span>
+            </footer>
+
+        </main>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Management | শিক্ষা হাব</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="admin-students-page">
+
+    <div class="admin-students-layout">
+
+        <!-- ================= SIDEBAR ================= -->
+
+        <aside class="admin-students-sidebar">
+
+            <div class="admin-students-brand">
+
+                <div class="admin-students-logo">
+                    শি
+                </div>
+
+                <div>
+                    <h2>শিক্ষা হাব</h2>
+                    <span>Admin Panel</span>
+                </div>
+
+            </div>
+
+
+            <!-- Admin Profile -->
+
+            <div class="admin-students-profile">
+
+                <div class="admin-students-avatar">
+                    AR
+                </div>
+
+                <div>
+                    <strong>Admin</strong>
+                    <span>Administrator</span>
+                </div>
+
+            </div>
+
+
+            <!-- Navigation -->
+
+            <nav class="admin-students-nav">
+
+                <a href="admin-dashboard.html">
+                    <span class="admin-students-nav-icon">⌂</span>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="subjects.html">
+                    <span class="admin-students-nav-icon">▦</span>
+                    <span>Subjects</span>
+                </a>
+
+                <a href="courses.html">
+                    <span class="admin-students-nav-icon">▤</span>
+                    <span>Courses</span>
+                </a>
+
+                <a href="lectures.html">
+                    <span class="admin-students-nav-icon">▶</span>
+                    <span>Lectures</span>
+                </a>
+
+                <a href="admin-teachers.html">
+                    <span class="admin-students-nav-icon">♙</span>
+                    <span>Teachers</span>
+                </a>
+
+                <a href="admin-students.html" class="active">
+                    <span class="admin-students-nav-icon">♟</span>
+                    <span>Students</span>
+                </a>
+
+                <a href="results.html">
+                    <span class="admin-students-nav-icon">▥</span>
+                    <span>Results</span>
+                </a>
+
+                <a href="admin-profile.html">
+                    <span class="admin-students-nav-icon">⚙</span>
+                    <span>My Profile</span>
+                </a>
+
+            </nav>
+
+
+            <!-- Logout -->
+
+            <div class="admin-students-sidebar-bottom">
+
+                <a href="login.html" class="admin-students-logout">
+                    <span>↪</span>
+                    <span>Logout</span>
+                </a>
+
+            </div>
+
+        </aside>
+
+
+
+        <!-- ================= MAIN CONTENT ================= -->
+
+        <main class="admin-students-main">
+
+
+            <!-- Topbar -->
+
+            <header class="admin-students-topbar">
+
+                <div>
+
+                    <span class="admin-students-eyebrow">
+                        USER MANAGEMENT
+                    </span>
+
+                    <h1>Student Management</h1>
+
+                    <p>
+                        Manage students, enrollment, progress and account status.
+                    </p>
+
+                </div>
+
+
+                <div class="admin-students-top-actions">
+
+                    <button class="admin-students-notification">
+                        🔔
+                        <span></span>
+                    </button>
+
+
+                    <div class="admin-students-top-profile">
+
+                        <div class="admin-students-small-avatar">
+                            AR
+                        </div>
+
+                        <div>
+                            <strong>Admin</strong>
+                            <small>Administrator</small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- ================= STATS ================= -->
+
+            <section class="admin-students-stats">
+
+
+                <div class="admin-students-stat-card">
+
+                    <div class="admin-students-stat-icon purple">
+                        👨‍🎓
+                    </div>
+
+                    <div>
+                        <span>Total Students</span>
+                        <strong>486</strong>
+                        <small>All registered students</small>
+                    </div>
+
+                </div>
+
+
+                <div class="admin-students-stat-card">
+
+                    <div class="admin-students-stat-icon green">
+                        ✓
+                    </div>
+
+                    <div>
+                        <span>Active Students</span>
+                        <strong>428</strong>
+                        <small>Currently learning</small>
+                    </div>
+
+                </div>
+
+
+                <div class="admin-students-stat-card">
+
+                    <div class="admin-students-stat-icon orange">
+                        ◷
+                    </div>
+
+                    <div>
+                        <span>Pending Accounts</span>
+                        <strong>32</strong>
+                        <small>Waiting for approval</small>
+                    </div>
+
+                </div>
+
+
+                <div class="admin-students-stat-card">
+
+                    <div class="admin-students-stat-icon blue">
+                        ↗
+                    </div>
+
+                    <div>
+                        <span>Avg. Progress</span>
+                        <strong>68%</strong>
+                        <small>Overall learning progress</small>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ================= STUDENT MANAGEMENT ================= -->
+
+            <section class="admin-students-section">
+
+
+                <!-- Section Header -->
+
+                <div class="admin-students-section-header">
+
+                    <div>
+
+                        <span class="admin-students-section-label">
+                            STUDENT DIRECTORY
+                        </span>
+
+                        <h2>All Students</h2>
+
+                        <p>
+                            View and manage every student registered on the platform.
+                        </p>
+
+                    </div>
+
+
+                    <button class="admin-students-add-btn">
+                        <span>＋</span>
+                        Add New Student
+                    </button>
+
+                </div>
+
+
+
+                <!-- Search + Filters -->
+
+                <div class="admin-students-toolbar">
+
+
+                    <div class="admin-students-search">
+
+                        <span>⌕</span>
+
+                        <input
+                            type="text"
+                            placeholder="Search student by name, email or phone..."
+                        >
+
+                    </div>
+
+
+                    <select>
+
+                        <option>All Subjects</option>
+                        <option>ICT</option>
+                        <option>English</option>
+                        <option>Programming</option>
+                        <option>Physics</option>
+                        <option>Chemistry</option>
+                        <option>Biology</option>
+                        <option>Dua</option>
+
+                    </select>
+
+
+                    <select>
+
+                        <option>All Status</option>
+                        <option>Active</option>
+                        <option>Pending</option>
+                        <option>Inactive</option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- ================= STUDENT TABLE ================= -->
+
+                <div class="admin-students-table-wrapper">
+
+                    <table class="admin-students-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Student</th>
+                                <th>Education</th>
+                                <th>Subjects</th>
+                                <th>Courses</th>
+                                <th>Progress</th>
+                                <th>Status</th>
+                                <th>Action</th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+
+                            <!-- Student 01 -->
+
+                            <tr>
+
+                                <td>
+
+                                    <div class="admin-students-user">
+
+                                        <div class="student-table-avatar avatar-one">
+                                            SA
+                                        </div>
+
+                                        <div>
+                                            <strong>Saif Ahmed</strong>
+                                            <span>saif@student.com</span>
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+
+                                    <strong>HSC 2026</strong>
+
+                                    <span class="table-muted">
+                                        Science
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="admin-students-tags">
+
+                                        <span>ICT</span>
+                                        <span>English</span>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+                                    05
+                                </td>
+
+
+                                <td>
+
+                                    <div class="student-progress-cell">
+
+                                        <div class="student-progress-info">
+                                            <span>82%</span>
+                                        </div>
+
+                                        <div class="student-progress-bar">
+                                            <span style="width: 82%;"></span>
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+
+                                    <span class="student-status active">
+                                        Active
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="admin-students-actions">
+
+                                        <button title="View Profile">👁</button>
+                                        <button title="Edit Student">✎</button>
+                                        <button title="More Options">⋮</button>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <!-- Student 02 -->
+
+                            <tr>
+
+                                <td>
+
+                                    <div class="admin-students-user">
+
+                                        <div class="student-table-avatar avatar-two">
+                                            MR
+                                        </div>
+
+                                        <div>
+                                            <strong>Mahi Rahman</strong>
+                                            <span>mahi@student.com</span>
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+
+                                    <strong>HSC 2026</strong>
+
+                                    <span class="table-muted">
+                                        Humanities
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="admin-students-tags">
+
+                                        <span>English</span>
+                                        <span>Dua</span>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+                                    04
+                                </td>
+
+
+                                <td>
+
+                                    <div class="student-progress-cell">
+
+                                        <div class="student-progress-info">
+                                            <span>74%</span>
+                                        </div>
+
+                                        <div class="student-progress-bar">
+                                            <span style="width: 74%;"></span>
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+
+                                    <span class="student-status active">
+                                        Active
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="admin-students-actions">
+
+                                        <button title="View Profile">👁</button>
+                                        <button title="Edit Student">✎</button>
+                                        <button title="More Options">⋮</button>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <!-- Student 03 -->
+
+                            <tr>
+
+                                <td>
+
+                                    <div class="admin-students-user">
+
+                                        <div class="student-table-avatar avatar-three">
+                                            AR
+                                        </div>
+
+                                        <div>
+                                            <strong>Arif Hasan</strong>
+                                            <span>arif@student.com</span>
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+
+                                    <strong>HSC 2027</strong>
+
+                                    <span class="table-muted">
+                                        Science
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="admin-students-tags">
+
+                                        <span>ICT</span>
+                                        <span>Physics</span>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+                                    06
+                                </td>
+
+
+                                <td>
+
+                                    <div class="student-progress-cell">
+
+                                        <div class="student-progress-info">
+                                            <span>61%</span>
+                                        </div>
+
+                                        <div class="student-progress-bar">
+                                            <span style="width: 61%;"></span>
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+
+                                    <span class="student-status active">
+                                        Active
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="admin-students-actions">
+
+                                        <button title="View Profile">👁</button>
+                                        <button title="Edit Student">✎</button>
+                                        <button title="More Options">⋮</button>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <!-- Student 04 -->
+
+                            <tr>
+
+                                <td>
+
+                                    <div class="admin-students-user">
+
+                                        <div class="student-table-avatar avatar-four">
+                                            TN
+                                        </div>
+
+                                        <div>
+                                            <strong>Tanjila Noor</strong>
+                                            <span>tanjila@student.com</span>
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+
+                                    <strong>HSC 2026</strong>
+
+                                    <span class="table-muted">
+                                        Science
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="admin-students-tags">
+
+                                        <span>Chemistry</span>
+                                        <span>Biology</span>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+                                    05
+                                </td>
+
+
+                                <td>
+
+                                    <div class="student-progress-cell">
+
+                                        <div class="student-progress-info">
+                                            <span>55%</span>
+                                        </div>
+
+                                        <div class="student-progress-bar">
+                                            <span style="width: 55%;"></span>
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+
+                                    <span class="student-status pending">
+                                        Pending
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="admin-students-actions">
+
+                                        <button title="View Profile">👁</button>
+                                        <button title="Edit Student">✎</button>
+                                        <button title="More Options">⋮</button>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <!-- Student 05 -->
+
+                            <tr>
+
+                                <td>
+
+                                    <div class="admin-students-user">
+
+                                        <div class="student-table-avatar avatar-five">
+                                            FH
+                                        </div>
+
+                                        <div>
+                                            <strong>Fahad Hossain</strong>
+                                            <span>fahad@student.com</span>
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+
+                                    <strong>HSC 2025</strong>
+
+                                    <span class="table-muted">
+                                        Science
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="admin-students-tags">
+
+                                        <span>Programming</span>
+                                        <span>ICT</span>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+                                    03
+                                </td>
+
+
+                                <td>
+
+                                    <div class="student-progress-cell">
+
+                                        <div class="student-progress-info">
+                                            <span>91%</span>
+                                        </div>
+
+                                        <div class="student-progress-bar">
+                                            <span style="width: 91%;"></span>
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+
+                                    <span class="student-status inactive">
+                                        Inactive
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="admin-students-actions">
+
+                                        <button title="View Profile">👁</button>
+                                        <button title="Edit Student">✎</button>
+                                        <button title="More Options">⋮</button>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+
+                <!-- ================= PAGINATION ================= -->
+
+                <div class="admin-students-pagination">
+
+                    <span>
+                        Showing 1–5 of 486 students
+                    </span>
+
+
+                    <div>
+
+                        <button>‹</button>
+                        <button class="current">1</button>
+                        <button>2</button>
+                        <button>3</button>
+                        <button>4</button>
+                        <button>›</button>
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- ================= STUDENT INSIGHT ================= -->
+
+            <section class="admin-students-insight">
+
+                <div class="admin-students-insight-icon">
+                    ✦
+                </div>
+
+                <div>
+
+                    <span>ADMIN INSIGHT</span>
+
+                    <h3>
+                        Monitor student progress and engagement.
+                    </h3>
+
+                    <p>
+                        Regular progress tracking helps identify students
+                        who may need additional academic support.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ================= FOOTER ================= -->
+
+            <footer class="admin-students-footer">
+
+                <span>
+                    © 2026 শিক্ষা হাব. All rights reserved.
+                </span>
+
+                <div>
+
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Help Center</a>
+
+                </div>
+
+            </footer>
+
+
+        </main>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

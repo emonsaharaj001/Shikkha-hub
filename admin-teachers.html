@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Teacher Management | শিক্ষা হাব</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="admin-teachers-page">
+
+    <div class="admin-teachers-layout">
+
+        <!-- ================= SIDEBAR ================= -->
+
+        <aside class="admin-teachers-sidebar">
+
+            <div class="admin-teachers-brand">
+                <div class="admin-teachers-logo">শি</div>
+
+                <div>
+                    <h2>শিক্ষা হাব</h2>
+                    <span>Admin Panel</span>
+                </div>
+            </div>
+
+
+            <!-- Admin Profile -->
+
+            <div class="admin-teachers-profile">
+
+                <div class="admin-teachers-avatar">
+                    AR
+                </div>
+
+                <div>
+                    <strong>Admin</strong>
+                    <span>Administrator</span>
+                </div>
+
+            </div>
+
+
+            <!-- Navigation -->
+
+            <nav class="admin-teachers-nav">
+
+                <a href="admin-dashboard.html">
+                    <span class="admin-teachers-nav-icon">⌂</span>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="subjects.html">
+                    <span class="admin-teachers-nav-icon">▦</span>
+                    <span>Subjects</span>
+                </a>
+
+                <a href="courses.html">
+                    <span class="admin-teachers-nav-icon">▤</span>
+                    <span>Courses</span>
+                </a>
+
+                <a href="lectures.html">
+                    <span class="admin-teachers-nav-icon">▶</span>
+                    <span>Lectures</span>
+                </a>
+
+                <a href="admin-teachers.html" class="active">
+                    <span class="admin-teachers-nav-icon">♙</span>
+                    <span>Teachers</span>
+                </a>
+
+                <a href="admin-students.html">
+                    <span class="admin-teachers-nav-icon">♟</span>
+                    <span>Students</span>
+                </a>
+
+                <a href="results.html">
+                    <span class="admin-teachers-nav-icon">▥</span>
+                    <span>Results</span>
+                </a>
+
+                <a href="admin-profile.html">
+                    <span class="admin-teachers-nav-icon">⚙</span>
+                    <span>My Profile</span>
+                </a>
+
+            </nav>
+
+
+            <!-- Logout -->
+
+            <div class="admin-teachers-sidebar-bottom">
+
+                <a href="login.html" class="admin-teachers-logout">
+                    <span>↪</span>
+                    <span>Logout</span>
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- ================= MAIN CONTENT ================= -->
+
+        <main class="admin-teachers-main">
+
+
+            <!-- Topbar -->
+
+            <header class="admin-teachers-topbar">
+
+                <div>
+
+                    <span class="admin-teachers-eyebrow">
+                        USER MANAGEMENT
+                    </span>
+
+                    <h1>Teacher Management</h1>
+
+                    <p>
+                        Manage teachers, qualifications, subjects and account status.
+                    </p>
+
+                </div>
+
+
+                <div class="admin-teachers-top-actions">
+
+                    <button class="admin-teachers-notification">
+                        🔔
+                        <span></span>
+                    </button>
+
+                    <div class="admin-teachers-top-profile">
+
+                        <div class="admin-teachers-small-avatar">
+                            AR
+                        </div>
+
+                        <div>
+                            <strong>Admin</strong>
+                            <small>Administrator</small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- ================= STATS ================= -->
+
+            <section class="admin-teachers-stats">
+
+                <div class="admin-teachers-stat-card">
+
+                    <div class="admin-teachers-stat-icon purple">
+                        👨‍🏫
+                    </div>
+
+                    <div>
+                        <span>Total Teachers</span>
+                        <strong>18</strong>
+                        <small>All registered teachers</small>
+                    </div>
+
+                </div>
+
+
+                <div class="admin-teachers-stat-card">
+
+                    <div class="admin-teachers-stat-icon green">
+                        ✓
+                    </div>
+
+                    <div>
+                        <span>Active Teachers</span>
+                        <strong>14</strong>
+                        <small>Currently teaching</small>
+                    </div>
+
+                </div>
+
+
+                <div class="admin-teachers-stat-card">
+
+                    <div class="admin-teachers-stat-icon orange">
+                        ◷
+                    </div>
+
+                    <div>
+                        <span>Pending Approval</span>
+                        <strong>03</strong>
+                        <small>Waiting for review</small>
+                    </div>
+
+                </div>
+
+
+                <div class="admin-teachers-stat-card">
+
+                    <div class="admin-teachers-stat-icon blue">
+                        📚
+                    </div>
+
+                    <div>
+                        <span>Total Subjects</span>
+                        <strong>08</strong>
+                        <small>Currently assigned</small>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ================= TEACHER MANAGEMENT ================= -->
+
+            <section class="admin-teachers-section">
+
+
+                <!-- Section Header -->
+
+                <div class="admin-teachers-section-header">
+
+                    <div>
+
+                        <span class="admin-teachers-section-label">
+                            TEACHER DIRECTORY
+                        </span>
+
+                        <h2>All Teachers</h2>
+
+                        <p>
+                            View and manage every teacher registered on the platform.
+                        </p>
+
+                    </div>
+
+
+                    <button class="admin-teachers-add-btn">
+                        <span>＋</span>
+                        Add New Teacher
+                    </button>
+
+                </div>
+
+
+
+                <!-- Search + Filters -->
+
+                <div class="admin-teachers-toolbar">
+
+                    <div class="admin-teachers-search">
+
+                        <span>⌕</span>
+
+                        <input
+                            type="text"
+                            placeholder="Search teacher by name, email or subject..."
+                        >
+
+                    </div>
+
+
+                    <select>
+                        <option>All Subjects</option>
+                        <option>ICT</option>
+                        <option>English</option>
+                        <option>Programming</option>
+                        <option>Physics</option>
+                        <option>Chemistry</option>
+                        <option>Biology</option>
+                        <option>Mathematics</option>
+                    </select>
+
+
+                    <select>
+                        <option>All Status</option>
+                        <option>Active</option>
+                        <option>Pending</option>
+                        <option>Inactive</option>
+                    </select>
+
+                </div>
+
+
+
+                <!-- ================= TEACHER TABLE ================= -->
+
+                <div class="admin-teachers-table-wrapper">
+
+                    <table class="admin-teachers-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Teacher</th>
+                                <th>Qualification</th>
+                                <th>Subjects</th>
+                                <th>Courses</th>
+                                <th>Students</th>
+                                <th>Status</th>
+                                <th>Action</th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+
+                            <!-- Teacher 01 -->
+
+                            <tr>
+
+                                <td>
+
+                                    <div class="admin-teachers-user">
+
+                                        <div class="teacher-table-avatar avatar-one">
+                                            NS
+                                        </div>
+
+                                        <div>
+                                            <strong>Nusrat Sultana</strong>
+                                            <span>nusrat@shikkhahub.com</span>
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+
+                                    <strong>B.Sc. in CSE</strong>
+                                    <span class="table-muted">
+                                        UIU
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="admin-teachers-tags">
+
+                                        <span>ICT</span>
+                                        <span>Programming</span>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>06</td>
+
+                                <td>124</td>
+
+
+                                <td>
+                                    <span class="teacher-status active">
+                                        Active
+                                    </span>
+                                </td>
+
+
+                                <td>
+
+                                    <div class="admin-teachers-actions">
+
+                                        <button title="View Profile">👁</button>
+                                        <button title="Edit Teacher">✎</button>
+                                        <button title="More Options">⋮</button>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <!-- Teacher 02 -->
+
+                            <tr>
+
+                                <td>
+
+                                    <div class="admin-teachers-user">
+
+                                        <div class="teacher-table-avatar avatar-two">
+                                            SA
+                                        </div>
+
+                                        <div>
+                                            <strong>Shakil Ahmed</strong>
+                                            <span>shakil@shikkhahub.com</span>
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+
+                                    <strong>M.Sc. in English</strong>
+                                    <span class="table-muted">
+                                        DU
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="admin-teachers-tags">
+
+                                        <span>English</span>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>04</td>
+
+                                <td>96</td>
+
+
+                                <td>
+                                    <span class="teacher-status active">
+                                        Active
+                                    </span>
+                                </td>
+
+
+                                <td>
+
+                                    <div class="admin-teachers-actions">
+
+                                        <button title="View Profile">👁</button>
+                                        <button title="Edit Teacher">✎</button>
+                                        <button title="More Options">⋮</button>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <!-- Teacher 03 -->
+
+                            <tr>
+
+                                <td>
+
+                                    <div class="admin-teachers-user">
+
+                                        <div class="teacher-table-avatar avatar-three">
+                                            FR
+                                        </div>
+
+                                        <div>
+                                            <strong>Fahim Rahman</strong>
+                                            <span>fahim@shikkhahub.com</span>
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+
+                                    <strong>B.Sc. in Physics</strong>
+                                    <span class="table-muted">
+                                        BUET
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="admin-teachers-tags">
+
+                                        <span>Physics</span>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>03</td>
+
+                                <td>72</td>
+
+
+                                <td>
+                                    <span class="teacher-status active">
+                                        Active
+                                    </span>
+                                </td>
+
+
+                                <td>
+
+                                    <div class="admin-teachers-actions">
+
+                                        <button title="View Profile">👁</button>
+                                        <button title="Edit Teacher">✎</button>
+                                        <button title="More Options">⋮</button>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <!-- Teacher 04 -->
+
+                            <tr>
+
+                                <td>
+
+                                    <div class="admin-teachers-user">
+
+                                        <div class="teacher-table-avatar avatar-four">
+                                            TM
+                                        </div>
+
+                                        <div>
+                                            <strong>Tasnim Mahmud</strong>
+                                            <span>tasnim@shikkhahub.com</span>
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+
+                                    <strong>M.Sc. in Chemistry</strong>
+                                    <span class="table-muted">
+                                        JU
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="admin-teachers-tags">
+
+                                        <span>Chemistry</span>
+                                        <span>Biology</span>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>05</td>
+
+                                <td>108</td>
+
+
+                                <td>
+                                    <span class="teacher-status pending">
+                                        Pending
+                                    </span>
+                                </td>
+
+
+                                <td>
+
+                                    <div class="admin-teachers-actions">
+
+                                        <button title="View Profile">👁</button>
+                                        <button title="Edit Teacher">✎</button>
+                                        <button title="More Options">⋮</button>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <!-- Teacher 05 -->
+
+                            <tr>
+
+                                <td>
+
+                                    <div class="admin-teachers-user">
+
+                                        <div class="teacher-table-avatar avatar-five">
+                                            RA
+                                        </div>
+
+                                        <div>
+                                            <strong>Rafiul Alam</strong>
+                                            <span>rafiul@shikkhahub.com</span>
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+
+                                    <strong>B.Sc. in CSE</strong>
+                                    <span class="table-muted">
+                                        NSU
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="admin-teachers-tags">
+
+                                        <span>Programming</span>
+                                        <span>ICT</span>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>04</td>
+
+                                <td>84</td>
+
+
+                                <td>
+                                    <span class="teacher-status inactive">
+                                        Inactive
+                                    </span>
+                                </td>
+
+
+                                <td>
+
+                                    <div class="admin-teachers-actions">
+
+                                        <button title="View Profile">👁</button>
+                                        <button title="Edit Teacher">✎</button>
+                                        <button title="More Options">⋮</button>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+
+                <!-- ================= PAGINATION ================= -->
+
+                <div class="admin-teachers-pagination">
+
+                    <span>
+                        Showing 1–5 of 18 teachers
+                    </span>
+
+                    <div>
+
+                        <button>‹</button>
+                        <button class="current">1</button>
+                        <button>2</button>
+                        <button>3</button>
+                        <button>4</button>
+                        <button>›</button>
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- ================= QUICK INSIGHT ================= -->
+
+            <section class="admin-teachers-insight">
+
+                <div class="admin-teachers-insight-icon">
+                    ✦
+                </div>
+
+                <div>
+
+                    <span>ADMIN INSIGHT</span>
+
+                    <h3>
+                        Keep teacher profiles complete and up to date.
+                    </h3>
+
+                    <p>
+                        Verified qualifications, subjects and teaching
+                        information help students choose the right teacher.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ================= FOOTER ================= -->
+
+            <footer class="admin-teachers-footer">
+
+                <span>
+                    © 2026 শিক্ষা হাব. All rights reserved.
+                </span>
+
+                <div>
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Help Center</a>
+                </div>
+
+            </footer>
+
+
+        </main>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

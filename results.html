@@ -1,0 +1,439 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Results & Assessment | শিক্ষা হাব</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="results-page">
+
+  <div class="results-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="results-sidebar">
+      <a href="index.html" class="results-brand">
+        <span class="results-logo">শি</span>
+        <span class="results-brand-text">
+          <strong>শিক্ষা হাব</strong>
+          <small>Learn Smarter</small>
+        </span>
+      </a>
+
+      <div class="results-profile">
+        <div class="results-avatar">ER</div>
+        <div>
+          <strong>Emon Saha Raj</strong>
+          <small>Administrator</small>
+        </div>
+      </div>
+
+      <nav class="results-nav">
+        <p class="results-nav-label">MAIN MENU</p>
+
+        <a href="admin-dashboard.html" class="results-nav-link">
+          <span>▦</span> Dashboard
+        </a>
+        <a href="subjects.html" class="results-nav-link">
+          <span>▤</span> Subjects
+        </a>
+        <a href="courses.html" class="results-nav-link">
+          <span>▣</span> Courses
+        </a>
+        <a href="lectures.html" class="results-nav-link">
+          <span>▶</span> Lectures
+        </a>
+        <a href="teacher-dashboard.html" class="results-nav-link">
+          <span>♙</span> Teachers
+        </a>
+        <a href="student-dashboard.html" class="results-nav-link">
+          <span>♧</span> Students
+        </a>
+        <a href="results.html" class="results-nav-link active">
+          <span>▥</span> Results
+        </a>
+
+        <p class="results-nav-label">ACCOUNT</p>
+
+        <a href="teacher-profile.html" class="results-nav-link">
+          <span>◎</span> My Profile
+        </a>
+        <a href="login.html" class="results-nav-link">
+          <span>↪</span> Logout
+        </a>
+      </nav>
+
+      <div class="results-sidebar-bottom">
+        <div class="results-help-icon">?</div>
+        <div>
+          <strong>Need help?</strong>
+          <small>Contact support</small>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="results-main">
+
+      <!-- TOPBAR -->
+      <header class="results-topbar">
+        <div>
+          <p class="results-eyebrow">ACADEMIC PERFORMANCE</p>
+          <h1>Results & Assessment</h1>
+          <p class="results-subtitle">
+            Track student results, assessments and academic progress.
+          </p>
+        </div>
+
+        <div class="results-top-actions">
+          <button class="results-icon-btn" type="button" aria-label="Notifications">♧</button>
+          <div class="results-top-user">
+            <div class="results-top-avatar">ER</div>
+            <div>
+              <strong>Emon Saha Raj</strong>
+              <small>Admin</small>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- SUMMARY CARDS -->
+      <section class="results-stats">
+
+        <article class="results-stat-card">
+          <div class="results-stat-icon purple">▥</div>
+          <div>
+            <p>Total Assessments</p>
+            <h2>24</h2>
+            <small>All available tests</small>
+          </div>
+        </article>
+
+        <article class="results-stat-card">
+          <div class="results-stat-icon green">✓</div>
+          <div>
+            <p>Completed Tests</p>
+            <h2>186</h2>
+            <small>Student submissions</small>
+          </div>
+        </article>
+
+        <article class="results-stat-card">
+          <div class="results-stat-icon orange">◷</div>
+          <div>
+            <p>Pending Reviews</p>
+            <h2>12</h2>
+            <small>Awaiting evaluation</small>
+          </div>
+        </article>
+
+        <article class="results-stat-card">
+          <div class="results-stat-icon blue">↗</div>
+          <div>
+            <p>Average Score</p>
+            <h2>78%</h2>
+            <small>Across assessments</small>
+          </div>
+        </article>
+
+      </section>
+
+      <!-- PERFORMANCE OVERVIEW -->
+      <section class="results-overview">
+
+        <div class="results-section-heading">
+          <div>
+            <h2>Performance Overview</h2>
+            <p>Sample academic performance data.</p>
+          </div>
+
+          <select aria-label="Select performance period">
+            <option>This Month</option>
+            <option>Last Month</option>
+            <option>This Year</option>
+          </select>
+        </div>
+
+        <div class="results-performance-grid">
+
+          <div class="results-performance-card">
+            <div class="results-performance-top">
+              <div>
+                <span class="results-mini-label">OVERALL PERFORMANCE</span>
+                <h3>78.5%</h3>
+                <p>Average student score</p>
+              </div>
+              <div class="results-performance-badge">+5.2%</div>
+            </div>
+
+            <div class="results-progress-list">
+
+              <div class="results-progress-item">
+                <div class="results-progress-label">
+                  <span>HSC ICT</span>
+                  <strong>85%</strong>
+                </div>
+                <div class="results-progress-track">
+                  <div class="results-progress-fill ict-fill" style="width:85%"></div>
+                </div>
+              </div>
+
+              <div class="results-progress-item">
+                <div class="results-progress-label">
+                  <span>English</span>
+                  <strong>72%</strong>
+                </div>
+                <div class="results-progress-track">
+                  <div class="results-progress-fill english-fill" style="width:72%"></div>
+                </div>
+              </div>
+
+              <div class="results-progress-item">
+                <div class="results-progress-label">
+                  <span>Programming</span>
+                  <strong>68%</strong>
+                </div>
+                <div class="results-progress-track">
+                  <div class="results-progress-fill programming-fill" style="width:68%"></div>
+                </div>
+              </div>
+
+              <div class="results-progress-item">
+                <div class="results-progress-label">
+                  <span>Dua</span>
+                  <strong>89%</strong>
+                </div>
+                <div class="results-progress-track">
+                  <div class="results-progress-fill dua-fill" style="width:89%"></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="results-grade-card">
+            <span class="results-mini-label">GRADE DISTRIBUTION</span>
+            <h3>Student Grades</h3>
+            <p>Illustrative distribution of recent results.</p>
+
+            <div class="results-grade-list">
+              <div class="results-grade-row">
+                <span class="results-grade grade-a">A+</span>
+                <div class="results-grade-track">
+                  <div class="results-grade-fill grade-a-fill" style="width:28%"></div>
+                </div>
+                <strong>28%</strong>
+              </div>
+
+              <div class="results-grade-row">
+                <span class="results-grade grade-b">A</span>
+                <div class="results-grade-track">
+                  <div class="results-grade-fill grade-b-fill" style="width:32%"></div>
+                </div>
+                <strong>32%</strong>
+              </div>
+
+              <div class="results-grade-row">
+                <span class="results-grade grade-c">B</span>
+                <div class="results-grade-track">
+                  <div class="results-grade-fill grade-c-fill" style="width:22%"></div>
+                </div>
+                <strong>22%</strong>
+              </div>
+
+              <div class="results-grade-row">
+                <span class="results-grade grade-d">C</span>
+                <div class="results-grade-track">
+                  <div class="results-grade-fill grade-d-fill" style="width:12%"></div>
+                </div>
+                <strong>12%</strong>
+              </div>
+
+              <div class="results-grade-row">
+                <span class="results-grade grade-f">F</span>
+                <div class="results-grade-track">
+                  <div class="results-grade-fill grade-f-fill" style="width:6%"></div>
+                </div>
+                <strong>6%</strong>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- RECENT RESULTS -->
+      <section class="results-table-section">
+
+        <div class="results-section-heading">
+          <div>
+            <h2>Recent Results</h2>
+            <p>Review student assessment records.</p>
+          </div>
+
+          <button class="results-export-btn" type="button">
+            ↓ Export Results
+          </button>
+        </div>
+
+        <div class="results-filters">
+          <div class="results-search">
+            <span>⌕</span>
+            <input type="search" placeholder="Search student or assessment..." aria-label="Search results">
+          </div>
+
+          <select aria-label="Filter by subject">
+            <option value="">All Subjects</option>
+            <option>HSC ICT</option>
+            <option>English</option>
+            <option>Programming</option>
+            <option>Dua</option>
+          </select>
+
+          <select aria-label="Filter by status">
+            <option value="">All Status</option>
+            <option>Passed</option>
+            <option>Failed</option>
+            <option>Pending</option>
+          </select>
+        </div>
+
+        <div class="results-table-wrap">
+          <table class="results-table">
+            <thead>
+              <tr>
+                <th>STUDENT</th>
+                <th>ASSESSMENT</th>
+                <th>SUBJECT</th>
+                <th>SCORE</th>
+                <th>GRADE</th>
+                <th>STATUS</th>
+                <th>ACTION</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>
+                  <div class="results-student">
+                    <div class="results-student-avatar avatar-purple">AR</div>
+                    <div>
+                      <strong>Arif Rahman</strong>
+                      <small>SH-1001</small>
+                    </div>
+                  </div>
+                </td>
+                <td>ICT Chapter Test</td>
+                <td><span class="results-subject-tag ict-tag">HSC ICT</span></td>
+                <td><strong>92/100</strong></td>
+                <td><span class="results-grade-pill grade-a-plus">A+</span></td>
+                <td><span class="results-status passed">Passed</span></td>
+                <td><button class="results-view-btn" type="button">View</button></td>
+              </tr>
+
+              <tr>
+                <td>
+                  <div class="results-student">
+                    <div class="results-student-avatar avatar-orange">NS</div>
+                    <div>
+                      <strong>Nusrat Jahan</strong>
+                      <small>SH-1002</small>
+                    </div>
+                  </div>
+                </td>
+                <td>Grammar Assessment</td>
+                <td><span class="results-subject-tag english-tag">English</span></td>
+                <td><strong>78/100</strong></td>
+                <td><span class="results-grade-pill grade-a">A</span></td>
+                <td><span class="results-status passed">Passed</span></td>
+                <td><button class="results-view-btn" type="button">View</button></td>
+              </tr>
+
+              <tr>
+                <td>
+                  <div class="results-student">
+                    <div class="results-student-avatar avatar-green">TH</div>
+                    <div>
+                      <strong>Tanvir Hasan</strong>
+                      <small>SH-1003</small>
+                    </div>
+                  </div>
+                </td>
+                <td>JavaScript Basics</td>
+                <td><span class="results-subject-tag programming-tag">Programming</span></td>
+                <td><strong>65/100</strong></td>
+                <td><span class="results-grade-pill grade-b">B</span></td>
+                <td><span class="results-status passed">Passed</span></td>
+                <td><button class="results-view-btn" type="button">View</button></td>
+              </tr>
+
+              <tr>
+                <td>
+                  <div class="results-student">
+                    <div class="results-student-avatar avatar-blue">SR</div>
+                    <div>
+                      <strong>Sumaiya Rahman</strong>
+                      <small>SH-1004</small>
+                    </div>
+                  </div>
+                </td>
+                <td>ICT Chapter Test</td>
+                <td><span class="results-subject-tag ict-tag">HSC ICT</span></td>
+                <td><strong>42/100</strong></td>
+                <td><span class="results-grade-pill grade-f">F</span></td>
+                <td><span class="results-status failed">Failed</span></td>
+                <td><button class="results-view-btn" type="button">View</button></td>
+              </tr>
+
+              <tr>
+                <td>
+                  <div class="results-student">
+                    <div class="results-student-avatar avatar-pink">FA</div>
+                    <div>
+                      <strong>Fahim Ahmed</strong>
+                      <small>SH-1005</small>
+                    </div>
+                  </div>
+                </td>
+                <td>Daily Dua Test</td>
+                <td><span class="results-subject-tag dua-tag">Dua</span></td>
+                <td><strong>—</strong></td>
+                <td><span class="results-grade-pill grade-pending">—</span></td>
+                <td><span class="results-status pending">Pending</span></td>
+                <td><button class="results-view-btn" type="button">View</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- PAGINATION -->
+        <div class="results-pagination">
+          <p>Showing <strong>1–5</strong> of <strong>186</strong> results</p>
+          <div class="results-page-buttons">
+            <button type="button" disabled>←</button>
+            <button type="button" class="current">1</button>
+            <button type="button">2</button>
+            <button type="button">3</button>
+            <button type="button">→</button>
+          </div>
+        </div>
+
+      </section>
+
+      <footer class="results-footer">
+        © 2026 শিক্ষা হাব. All rights reserved.
+      </footer>
+
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
