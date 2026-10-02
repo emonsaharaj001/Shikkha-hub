@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Add New Teacher | Shikkha Hub</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f7fb;
+            color: #1f2937;
+        }
+
+        .layout {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* SIDEBAR */
+
+        .sidebar {
+            width: 250px;
+            background: #111827;
+            color: white;
+            padding: 25px 18px;
+            position: fixed;
+            left: 0;
+            top: 0;
+            bottom: 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 35px;
+        }
+
+        .logo-box {
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #5865f2, #8b5cf6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .logo-text strong {
+            display: block;
+            font-size: 16px;
+        }
+
+        .logo-text span {
+            font-size: 11px;
+            color: #9ca3af;
+        }
+
+        .menu-title {
+            font-size: 10px;
+            color: #6b7280;
+            margin: 20px 10px 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .menu a {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #d1d5db;
+            text-decoration: none;
+            padding: 12px 13px;
+            border-radius: 10px;
+            margin-bottom: 5px;
+            font-size: 13px;
+            transition: 0.2s;
+        }
+
+        .menu a:hover,
+        .menu a.active {
+            background: #5865f2;
+            color: white;
+        }
+
+        .logout {
+            position: absolute;
+            bottom: 25px;
+            left: 18px;
+            right: 18px;
+        }
+
+        .logout a {
+            display: block;
+            text-decoration: none;
+            color: #fca5a5;
+            padding: 12px;
+            border-radius: 10px;
+            font-size: 13px;
+        }
+
+        .logout a:hover {
+            background: #3f1d1d;
+        }
+
+        /* MAIN */
+
+        .main {
+            margin-left: 250px;
+            width: calc(100% - 250px);
+            padding: 30px;
+        }
+
+        .topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .topbar h1 {
+            font-size: 25px;
+            color: #111827;
+        }
+
+        .topbar p {
+            margin-top: 6px;
+            color: #6b7280;
+            font-size: 13px;
+        }
+
+        .back-btn {
+            text-decoration: none;
+            background: white;
+            color: #374151;
+            border: 1px solid #e5e7eb;
+            padding: 10px 16px;
+            border-radius: 10px;
+            font-size: 12px;
+        }
+
+        .back-btn:hover {
+            background: #f9fafb;
+        }
+
+        /* FORM CARD */
+
+        .card {
+            background: white;
+            border-radius: 18px;
+            padding: 28px;
+            box-shadow: 0 8px 30px rgba(15, 23, 42, 0.05);
+            max-width: 1000px;
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 18px;
+            color: #111827;
+        }
+
+        .section-description {
+            font-size: 12px;
+            color: #6b7280;
+            margin-bottom: 20px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group.full {
+            grid-column: 1 / -1;
+        }
+
+        .form-group label {
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 7px;
+            color: #374151;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+            padding: 12px 13px;
+            font-size: 13px;
+            outline: none;
+            transition: 0.2s;
+            background: white;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: #5865f2;
+            box-shadow: 0 0 0 3px rgba(88, 101, 242, 0.08);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 110px;
+        }
+
+        /* SUBJECTS */
+
+        .subjects {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .subject-option {
+            position: relative;
+        }
+
+        .subject-option input {
+            display: none;
+        }
+
+        .subject-option label {
+            display: block;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+            padding: 12px;
+            text-align: center;
+            cursor: pointer;
+            font-size: 12px;
+            color: #374151;
+            transition: 0.2s;
+        }
+
+        .subject-option input:checked + label {
+            background: #eef0ff;
+            border-color: #5865f2;
+            color: #5865f2;
+            font-weight: bold;
+        }
+
+        /* PHOTO UPLOAD */
+
+        .photo-upload {
+            border: 1.5px dashed #d7dce5;
+            border-radius: 13px;
+            padding: 25px;
+            text-align: center;
+            cursor: pointer;
+            transition: 0.2s;
+            display: block;
+        }
+
+        .photo-upload:hover {
+            border-color: #5865f2;
+            background: #fafaff;
+        }
+
+        .photo-icon {
+            width: 75px;
+            height: 75px;
+            border-radius: 14px;
+            margin: 0 auto 10px;
+            background: #f3f4f6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            font-size: 28px;
+        }
+
+        .photo-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .photo-upload strong {
+            display: block;
+            font-size: 12px;
+            color: #374151;
+        }
+
+        .photo-upload span {
+            display: block;
+            color: #9ca3af;
+            font-size: 10px;
+            margin-top: 4px;
+        }
+
+        .photo-upload input {
+            display: none;
+        }
+
+        /* BUTTONS */
+
+        .form-actions {
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid #f0f1f4;
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+        }
+
+        .cancel-btn {
+            text-decoration: none;
+            padding: 11px 18px;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+            color: #374151;
+            font-size: 12px;
+        }
+
+        .create-btn {
+            border: none;
+            background: linear-gradient(135deg, #5865f2, #8b5cf6);
+            color: white;
+            padding: 11px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .create-btn:hover {
+            opacity: 0.92;
+        }
+
+        .note {
+            margin-top: 20px;
+            padding: 13px 15px;
+            border-radius: 10px;
+            background: #f8f9ff;
+            border: 1px solid #e4e7ff;
+            color: #596174;
+            font-size: 11px;
+            line-height: 1.6;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 800px) {
+
+            .sidebar {
+                width: 210px;
+            }
+
+            .main {
+                margin-left: 210px;
+                width: calc(100% - 210px);
+                padding: 20px;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-group.full {
+                grid-column: auto;
+            }
+
+            .subjects {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .sidebar {
+                display: none;
+            }
+
+            .main {
+                margin-left: 0;
+                width: 100%;
+                padding: 15px;
+            }
+
+            .topbar {
+                align-items: flex-start;
+                gap: 15px;
+            }
+
+            .topbar h1 {
+                font-size: 20px;
+            }
+
+            .card {
+                padding: 20px;
+            }
+
+            .subjects {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .form-actions {
+                flex-direction: column;
+            }
+
+            .cancel-btn,
+            .create-btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="layout">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <div class="logo-box">
+                শি
+            </div>
+
+            <div class="logo-text">
+                <strong>শিক্ষা হাব</strong>
+                <span>Admin Panel</span>
+            </div>
+
+        </div>
+
+
+        <div class="menu">
+
+            <div class="menu-title">
+                Main
+            </div>
+
+            <a href="admin-dashboard.html">
+                📊 Dashboard
+            </a>
+
+            <a href="admin-students.html">
+                👨‍🎓 Students
+            </a>
+
+            <a href="admin-teachers.html" class="active">
+                👨‍🏫 Teachers
+            </a>
+
+
+            <div class="menu-title">
+                Learning
+            </div>
+
+            <a href="subjects.html">
+                📚 Subjects
+            </a>
+
+            <a href="courses.html">
+                📖 Courses
+            </a>
+
+            <a href="lectures.html">
+                🎥 Lectures
+            </a>
+
+            <a href="results.html">
+                📈 Results
+            </a>
+
+        </div>
+
+
+        <div class="logout">
+
+            <a href="index.html">
+                🚪 Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+
+    <main class="main">
+
+        <div class="topbar">
+
+            <div>
+
+                <h1>
+                    Add New Teacher
+                </h1>
+
+                <p>
+                    Create a teacher profile for Shikkha Hub.
+                </p>
+
+            </div>
+
+            <a
+                href="admin-teachers.html"
+                class="back-btn"
+            >
+                ← Back to Teachers
+            </a>
+
+        </div>
+
+
+        <!-- FORM -->
+
+        <div class="card">
+
+            <form id="teacherForm">
+
+                <div class="section-title">
+                    Teacher Information
+                </div>
+
+                <div class="section-description">
+                    Enter the teacher's personal and professional information.
+                </div>
+
+
+                <div class="form-grid">
+
+
+                    <!-- NAME -->
+
+                    <div class="form-group">
+
+                        <label for="teacherName">
+                            Teacher Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="teacherName"
+                            placeholder="Enter teacher name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- EMAIL -->
+
+                    <div class="form-group">
+
+                        <label for="teacherEmail">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="teacherEmail"
+                            placeholder="teacher@example.com"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- PHONE -->
+
+                    <div class="form-group">
+
+                        <label for="teacherPhone">
+                            Phone Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="teacherPhone"
+                            placeholder="017XXXXXXXX"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- UNIVERSITY -->
+
+                    <div class="form-group">
+
+                        <label for="university">
+                            University
+                        </label>
+
+                        <input
+                            type="text"
+                            id="university"
+                            placeholder="Enter university name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- QUALIFICATION -->
+
+                    <div class="form-group">
+
+                        <label for="qualification">
+                            Qualification
+                        </label>
+
+                        <input
+                            type="text"
+                            id="qualification"
+                            placeholder="e.g. BSc in CSE"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- EXPERIENCE -->
+
+                    <div class="form-group">
+
+                        <label for="experience">
+                            Teaching Experience
+                        </label>
+
+                        <input
+                            type="text"
+                            id="experience"
+                            placeholder="e.g. 3 Years"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- SUBJECTS -->
+
+                    <div class="form-group full">
+
+                        <label>
+                            Teaching Subjects
+                        </label>
+
+                        <div class="subjects">
+
+
+                            <div class="subject-option">
+
+                                <input
+                                    type="checkbox"
+                                    id="biology"
+                                    name="subjects"
+                                    value="Biology"
+                                >
+
+                                <label for="biology">
+                                    Biology
+                                </label>
+
+                            </div>
+
+
+                            <div class="subject-option">
+
+                                <input
+                                    type="checkbox"
+                                    id="physics"
+                                    name="subjects"
+                                    value="Physics"
+                                >
+
+                                <label for="physics">
+                                    Physics
+                                </label>
+
+                            </div>
+
+
+                            <div class="subject-option">
+
+                                <input
+                                    type="checkbox"
+                                    id="chemistry"
+                                    name="subjects"
+                                    value="Chemistry"
+                                >
+
+                                <label for="chemistry">
+                                    Chemistry
+                                </label>
+
+                            </div>
+
+
+                            <div class="subject-option">
+
+                                <input
+                                    type="checkbox"
+                                    id="ict"
+                                    name="subjects"
+                                    value="ICT"
+                                >
+
+                                <label for="ict">
+                                    ICT
+                                </label>
+
+                            </div>
+
+
+                            <div class="subject-option">
+
+                                <input
+                                    type="checkbox"
+                                    id="english"
+                                    name="subjects"
+                                    value="English"
+                                >
+
+                                <label for="english">
+                                    English
+                                </label>
+
+                            </div>
+
+
+                            <div class="subject-option">
+
+                                <input
+                                    type="checkbox"
+                                    id="bangla"
+                                    name="subjects"
+                                    value="Bangla"
+                                >
+
+                                <label for="bangla">
+                                    Bangla
+                                </label>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PROFILE PHOTO -->
+
+                    <div class="form-group full">
+
+                        <label>
+                            Profile Photo
+                        </label>
+
+                        <label
+                            for="teacherPhoto"
+                            class="photo-upload"
+                        >
+
+                            <div
+                                class="photo-icon"
+                                id="photoPreview"
+                            >
+                                📷
+                            </div>
+
+                            <strong id="photoText">
+                                Upload Teacher Photo
+                            </strong>
+
+                            <span id="photoStatus">
+                                JPG, PNG or WEBP
+                            </span>
+
+                            <input
+                                type="file"
+                                id="teacherPhoto"
+                                accept="image/*"
+                            >
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- BIO -->
+
+                    <div class="form-group full">
+
+                        <label for="teacherBio">
+                            Teacher Bio
+                        </label>
+
+                        <textarea
+                            id="teacherBio"
+                            placeholder="Write a short description about the teacher..."
+                        ></textarea>
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- NOTE -->
+
+                <div class="note">
+
+                    <strong>Admin Note:</strong>
+
+                    Teacher account creation is currently
+                    frontend-only. Backend authentication and
+                    account creation will be connected in the
+                    next stage.
+
+                </div>
+
+
+                <!-- ACTIONS -->
+
+                <div class="form-actions">
+
+                    <a
+                        href="admin-teachers.html"
+                        class="cancel-btn"
+                    >
+                        Cancel
+                    </a>
+
+                    <button
+                        type="submit"
+                        class="create-btn"
+                    >
+                        Create Teacher
+                    </button>
+
+                </div>
+
+
+            </form>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<script>
+
+    /* =========================
+       PROFILE PHOTO PREVIEW
+    ========================= */
+
+    const teacherPhoto =
+        document.getElementById("teacherPhoto");
+
+    const photoPreview =
+        document.getElementById("photoPreview");
+
+    const photoText =
+        document.getElementById("photoText");
+
+    const photoStatus =
+        document.getElementById("photoStatus");
+
+
+    teacherPhoto.addEventListener(
+        "change",
+        function () {
+
+            const file = this.files[0];
+
+            if (!file) {
+                return;
+            }
+
+
+            /* CHECK IMAGE */
+
+            if (!file.type.startsWith("image/")) {
+
+                alert(
+                    "Please select a valid image file."
+                );
+
+                this.value = "";
+
+                return;
+            }
+
+
+            /* FILE SIZE CHECK */
+
+            if (file.size > 5 * 1024 * 1024) {
+
+                alert(
+                    "Please select an image smaller than 5MB."
+                );
+
+                this.value = "";
+
+                return;
+            }
+
+
+            /* READ IMAGE */
+
+            const reader =
+                new FileReader();
+
+
+            reader.onload =
+                function (event) {
+
+                    photoPreview.innerHTML = "";
+
+                    const image =
+                        document.createElement("img");
+
+                    image.src =
+                        event.target.result;
+
+                    image.alt =
+                        "Teacher Profile Photo";
+
+                    photoPreview.appendChild(
+                        image
+                    );
+
+
+                    photoText.textContent =
+                        file.name;
+
+                    photoStatus.textContent =
+                        "Photo selected successfully";
+
+                };
+
+
+            reader.readAsDataURL(file);
+
+        }
+    );
+
+
+    /* =========================
+       TEACHER FORM
+    ========================= */
+
+    const teacherForm =
+        document.getElementById("teacherForm");
+
+
+    teacherForm.addEventListener(
+        "submit",
+        function (event) {
+
+            event.preventDefault();
+
+
+            /* SELECTED SUBJECTS */
+
+            const selectedSubjects =
+                document.querySelectorAll(
+                    'input[name="subjects"]:checked'
+                );
+
+
+            if (selectedSubjects.length === 0) {
+
+                alert(
+                    "Please select at least one subject."
+                );
+
+                return;
+
+            }
+
+
+            /* TEACHER NAME */
+
+            const teacherName =
+                document
+                    .getElementById("teacherName")
+                    .value
+                    .trim();
+
+
+            /* SUCCESS */
+
+            alert(
+                "Teacher form submitted successfully for " +
+                teacherName +
+                ".\n\n" +
+                "The teacher profile is ready. " +
+                "Backend account creation will be connected later."
+            );
+
+
+            /* GO BACK */
+
+            window.location.href =
+                "admin-teachers.html";
+
+        }
+    );
+
+</script>
+
+</body>
+</html>

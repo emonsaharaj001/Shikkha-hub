@@ -140,7 +140,11 @@
 
                 <div class="admin-students-top-actions">
 
-                    <button class="admin-students-notification">
+                    <button
+                        type="button"
+                        class="admin-students-notification"
+                        onclick="showNotification()"
+                    >
                         🔔
                         <span></span>
                     </button>
@@ -257,7 +261,11 @@
                     </div>
 
 
-                    <button class="admin-students-add-btn">
+                    <button
+                        type="button"
+                        class="admin-students-add-btn"
+                        onclick="addStudent()"
+                    >
                         <span>＋</span>
                         Add New Student
                     </button>
@@ -277,32 +285,33 @@
 
                         <input
                             type="text"
+                            id="studentSearch"
                             placeholder="Search student by name, email or phone..."
                         >
 
                     </div>
 
 
-                    <select>
+                    <select id="subjectFilter">
 
-                        <option>All Subjects</option>
-                        <option>ICT</option>
-                        <option>English</option>
-                        <option>Programming</option>
-                        <option>Physics</option>
-                        <option>Chemistry</option>
-                        <option>Biology</option>
-                        <option>Dua</option>
+                        <option value="all">All Subjects</option>
+                        <option value="ICT">ICT</option>
+                        <option value="English">English</option>
+                        <option value="Programming">Programming</option>
+                        <option value="Physics">Physics</option>
+                        <option value="Chemistry">Chemistry</option>
+                        <option value="Biology">Biology</option>
+                        <option value="Dua">Dua</option>
 
                     </select>
 
 
-                    <select>
+                    <select id="statusFilter">
 
-                        <option>All Status</option>
-                        <option>Active</option>
-                        <option>Pending</option>
-                        <option>Inactive</option>
+                        <option value="all">All Status</option>
+                        <option value="Active">Active</option>
+                        <option value="Pending">Pending</option>
+                        <option value="Inactive">Inactive</option>
 
                     </select>
 
@@ -333,12 +342,18 @@
                         </thead>
 
 
-                        <tbody>
+                        <tbody id="studentTableBody">
 
 
                             <!-- Student 01 -->
 
-                            <tr>
+                            <tr
+                                data-name="Saif Ahmed"
+                                data-email="saif@student.com"
+                                data-phone=""
+                                data-subjects="ICT English"
+                                data-status="Active"
+                            >
 
                                 <td>
 
@@ -416,9 +431,29 @@
 
                                     <div class="admin-students-actions">
 
-                                        <button title="View Profile">👁</button>
-                                        <button title="Edit Student">✎</button>
-                                        <button title="More Options">⋮</button>
+                                        <button
+                                            type="button"
+                                            title="View Profile"
+                                            onclick="viewStudent('Saif Ahmed')"
+                                        >
+                                            👁
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            title="Edit Student"
+                                            onclick="editStudent('Saif Ahmed')"
+                                        >
+                                            ✎
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            title="More Options"
+                                            onclick="moreStudentOptions('Saif Ahmed')"
+                                        >
+                                            ⋮
+                                        </button>
 
                                     </div>
 
@@ -430,7 +465,13 @@
 
                             <!-- Student 02 -->
 
-                            <tr>
+                            <tr
+                                data-name="Mahi Rahman"
+                                data-email="mahi@student.com"
+                                data-phone=""
+                                data-subjects="English Dua"
+                                data-status="Active"
+                            >
 
                                 <td>
 
@@ -508,9 +549,29 @@
 
                                     <div class="admin-students-actions">
 
-                                        <button title="View Profile">👁</button>
-                                        <button title="Edit Student">✎</button>
-                                        <button title="More Options">⋮</button>
+                                        <button
+                                            type="button"
+                                            title="View Profile"
+                                            onclick="viewStudent('Mahi Rahman')"
+                                        >
+                                            👁
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            title="Edit Student"
+                                            onclick="editStudent('Mahi Rahman')"
+                                        >
+                                            ✎
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            title="More Options"
+                                            onclick="moreStudentOptions('Mahi Rahman')"
+                                        >
+                                            ⋮
+                                        </button>
 
                                     </div>
 
@@ -522,7 +583,13 @@
 
                             <!-- Student 03 -->
 
-                            <tr>
+                            <tr
+                                data-name="Arif Hasan"
+                                data-email="arif@student.com"
+                                data-phone=""
+                                data-subjects="ICT Physics"
+                                data-status="Active"
+                            >
 
                                 <td>
 
@@ -600,9 +667,29 @@
 
                                     <div class="admin-students-actions">
 
-                                        <button title="View Profile">👁</button>
-                                        <button title="Edit Student">✎</button>
-                                        <button title="More Options">⋮</button>
+                                        <button
+                                            type="button"
+                                            title="View Profile"
+                                            onclick="viewStudent('Arif Hasan')"
+                                        >
+                                            👁
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            title="Edit Student"
+                                            onclick="editStudent('Arif Hasan')"
+                                        >
+                                            ✎
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            title="More Options"
+                                            onclick="moreStudentOptions('Arif Hasan')"
+                                        >
+                                            ⋮
+                                        </button>
 
                                     </div>
 
@@ -614,7 +701,13 @@
 
                             <!-- Student 04 -->
 
-                            <tr>
+                            <tr
+                                data-name="Tanjila Noor"
+                                data-email="tanjila@student.com"
+                                data-phone=""
+                                data-subjects="Chemistry Biology"
+                                data-status="Pending"
+                            >
 
                                 <td>
 
@@ -692,9 +785,29 @@
 
                                     <div class="admin-students-actions">
 
-                                        <button title="View Profile">👁</button>
-                                        <button title="Edit Student">✎</button>
-                                        <button title="More Options">⋮</button>
+                                        <button
+                                            type="button"
+                                            title="View Profile"
+                                            onclick="viewStudent('Tanjila Noor')"
+                                        >
+                                            👁
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            title="Edit Student"
+                                            onclick="editStudent('Tanjila Noor')"
+                                        >
+                                            ✎
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            title="More Options"
+                                            onclick="moreStudentOptions('Tanjila Noor')"
+                                        >
+                                            ⋮
+                                        </button>
 
                                     </div>
 
@@ -706,7 +819,13 @@
 
                             <!-- Student 05 -->
 
-                            <tr>
+                            <tr
+                                data-name="Fahad Hossain"
+                                data-email="fahad@student.com"
+                                data-phone=""
+                                data-subjects="Programming ICT"
+                                data-status="Inactive"
+                            >
 
                                 <td>
 
@@ -784,9 +903,29 @@
 
                                     <div class="admin-students-actions">
 
-                                        <button title="View Profile">👁</button>
-                                        <button title="Edit Student">✎</button>
-                                        <button title="More Options">⋮</button>
+                                        <button
+                                            type="button"
+                                            title="View Profile"
+                                            onclick="viewStudent('Fahad Hossain')"
+                                        >
+                                            👁
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            title="Edit Student"
+                                            onclick="editStudent('Fahad Hossain')"
+                                        >
+                                            ✎
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            title="More Options"
+                                            onclick="moreStudentOptions('Fahad Hossain')"
+                                        >
+                                            ⋮
+                                        </button>
 
                                     </div>
 
@@ -807,19 +946,29 @@
 
                 <div class="admin-students-pagination">
 
-                    <span>
+                    <span id="studentCount">
                         Showing 1–5 of 486 students
                     </span>
 
 
                     <div>
 
-                        <button>‹</button>
-                        <button class="current">1</button>
-                        <button>2</button>
-                        <button>3</button>
-                        <button>4</button>
-                        <button>›</button>
+                        <button type="button">‹</button>
+
+                        <button
+                            type="button"
+                            class="current"
+                        >
+                            1
+                        </button>
+
+                        <button type="button">2</button>
+
+                        <button type="button">3</button>
+
+                        <button type="button">4</button>
+
+                        <button type="button">›</button>
 
                     </div>
 
@@ -881,7 +1030,207 @@
     </div>
 
 
-    <script src="script.js"></script>
+    <script>
+
+        /* =========================
+           ADD STUDENT
+        ========================= */
+
+        function addStudent() {
+
+            window.location.href =
+                "admin-add-student.html";
+
+        }
+
+
+        /* =========================
+           VIEW STUDENT
+        ========================= */
+
+        function viewStudent(studentName) {
+
+            window.location.href =
+                "admin-student-profile.html?name=" +
+                encodeURIComponent(studentName);
+
+        }
+
+
+        /* =========================
+           EDIT STUDENT
+        ========================= */
+
+        function editStudent(studentName) {
+
+            alert(
+                "Edit Student\n\n" +
+                studentName +
+                "\n\nStudent editing will be connected later."
+            );
+
+        }
+
+
+        /* =========================
+           MORE OPTIONS
+        ========================= */
+
+        function moreStudentOptions(studentName) {
+
+            alert(
+                "More options for " +
+                studentName +
+                "\n\n" +
+                "Account actions will be connected later."
+            );
+
+        }
+
+
+        /* =========================
+           NOTIFICATION
+        ========================= */
+
+        function showNotification() {
+
+            alert(
+                "No new notifications."
+            );
+
+        }
+
+
+        /* =========================
+           SEARCH
+        ========================= */
+
+        const studentSearch =
+            document.getElementById(
+                "studentSearch"
+            );
+
+        const subjectFilter =
+            document.getElementById(
+                "subjectFilter"
+            );
+
+        const statusFilter =
+            document.getElementById(
+                "statusFilter"
+            );
+
+        const tableRows =
+            document.querySelectorAll(
+                "#studentTableBody tr"
+            );
+
+        function filterStudents() {
+
+            const searchValue =
+                studentSearch.value
+                    .toLowerCase()
+                    .trim();
+
+            const subjectValue =
+                subjectFilter.value;
+
+            const statusValue =
+                statusFilter.value;
+
+            let visibleCount = 0;
+
+            tableRows.forEach(row => {
+
+                const name =
+                    row.dataset.name
+                        .toLowerCase();
+
+                const email =
+                    row.dataset.email
+                        .toLowerCase();
+
+                const phone =
+                    row.dataset.phone
+                        .toLowerCase();
+
+                const subjects =
+                    row.dataset.subjects;
+
+                const status =
+                    row.dataset.status;
+
+                const matchesSearch =
+                    name.includes(searchValue) ||
+                    email.includes(searchValue) ||
+                    phone.includes(searchValue);
+
+                const matchesSubject =
+                    subjectValue === "all" ||
+                    subjects.includes(subjectValue);
+
+                const matchesStatus =
+                    statusValue === "all" ||
+                    status === statusValue;
+
+                const showRow =
+                    matchesSearch &&
+                    matchesSubject &&
+                    matchesStatus;
+
+                row.style.display =
+                    showRow ? "" : "none";
+
+                if (showRow) {
+                    visibleCount++;
+                }
+
+            });
+
+
+            const countElement =
+                document.getElementById(
+                    "studentCount"
+                );
+
+            if (
+                searchValue ||
+                subjectValue !== "all" ||
+                statusValue !== "all"
+            ) {
+
+                countElement.textContent =
+                    "Showing " +
+                    visibleCount +
+                    " matching students";
+
+            } else {
+
+                countElement.textContent =
+                    "Showing 1–5 of 486 students";
+
+            }
+
+        }
+
+
+        studentSearch.addEventListener(
+            "input",
+            filterStudents
+        );
+
+        subjectFilter.addEventListener(
+            "change",
+            filterStudents
+        );
+
+        statusFilter.addEventListener(
+            "change",
+            filterStudents
+        );
+
+    </script>
+
 
 </body>
 </html>
