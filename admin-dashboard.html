@@ -37,7 +37,7 @@
                 </div>
 
                 <div>
-                    <strong>Admin</strong>
+                    <strong id="sidebarAdminName">Admin</strong>
                     <span>Administrator</span>
                 </div>
 
@@ -100,7 +100,7 @@
 
             <div class="admin-logout">
 
-                <a href="index.html">
+                <a href="#" id="adminLogoutBtn">
                     <span class="menu-icon">↪</span>
                     <span class="menu-text">Logout</span>
                 </a>
@@ -126,7 +126,10 @@
                         ADMIN PANEL
                     </span>
 
-                    <h1>Good Morning, Admin! 👋</h1>
+                    <h1>
+                        Good Morning,
+                        <span id="topAdminName">Admin</span>! 👋
+                    </h1>
 
                     <p>
                         Manage your শিক্ষা হাব platform from one place.
@@ -148,8 +151,13 @@
                         </div>
 
                         <div>
-                            <strong>Admin</strong>
-                            <span>Administrator</span>
+                            <strong id="topProfileAdminName">
+                                Admin
+                            </strong>
+
+                            <span>
+                                Administrator
+                            </span>
                         </div>
 
                     </div>
@@ -596,7 +604,138 @@
     </div>
 
 
-    <script src="script.js"></script>
+    <!-- ================= ADMIN AUTH + LOGOUT ================= -->
+
+    <script>
+
+        // ==========================================
+        // CHECK ADMIN LOGIN
+        // ==========================================
+
+        const adminToken =
+            localStorage.getItem("adminToken");
+
+        const adminData =
+            localStorage.getItem("admin");
+
+
+        if (!adminToken || !adminData) {
+
+            alert("Please login as Admin first.");
+
+            window.location.href = "login.html";
+
+        }
+
+
+        // ==========================================
+        // LOAD ADMIN INFORMATION
+        // ==========================================
+
+        try {
+
+            const admin =
+                JSON.parse(adminData);
+
+            if (admin && admin.name) {
+
+                const sidebarAdminName =
+                    document.getElementById("sidebarAdminName");
+
+                const topAdminName =
+                    document.getElementById("topAdminName");
+
+                const topProfileAdminName =
+                    document.getElementById(
+                        "topProfileAdminName"
+                    );
+
+
+                if (sidebarAdminName) {
+
+                    sidebarAdminName.textContent =
+                        admin.name;
+
+                }
+
+
+                if (topAdminName) {
+
+                    topAdminName.textContent =
+                        admin.name;
+
+                }
+
+
+                if (topProfileAdminName) {
+
+                    topProfileAdminName.textContent =
+                        admin.name;
+
+                }
+
+            }
+
+        } catch (error) {
+
+            console.error(
+                "Unable to load admin data:",
+                error
+            );
+
+        }
+
+
+        // ==========================================
+        // ADMIN LOGOUT
+        // ==========================================
+
+        const adminLogoutBtn =
+            document.getElementById("adminLogoutBtn");
+
+
+        if (adminLogoutBtn) {
+
+            adminLogoutBtn.addEventListener(
+                "click",
+                function (event) {
+
+                    event.preventDefault();
+
+
+                    const confirmLogout =
+                        confirm(
+                            "Are you sure you want to logout?"
+                        );
+
+
+                    if (!confirmLogout) {
+
+                        return;
+
+                    }
+
+
+                    // Remove admin authentication
+                    localStorage.removeItem(
+                        "adminToken"
+                    );
+
+                    localStorage.removeItem(
+                        "admin"
+                    );
+
+
+                    // Go to login page
+                    window.location.href =
+                        "login.html";
+
+                }
+            );
+
+        }
+
+    </script>
 
 </body>
 

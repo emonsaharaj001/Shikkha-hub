@@ -18,12 +18,14 @@
         <section class="auth-info">
 
             <a href="index.html" class="auth-logo">
+
                 <div class="logo-box">শি</div>
 
                 <div>
                     <h2>শিক্ষা হাব</h2>
                     <span>Learn Smarter</span>
                 </div>
+
             </a>
 
             <div class="auth-info-content">
@@ -45,39 +47,57 @@
                 <div class="auth-points">
 
                     <div class="auth-point">
-                        <div class="point-icon">✓</div>
+
+                        <div class="point-icon">
+                            ✓
+                        </div>
 
                         <div>
                             <strong>Learn Anytime</strong>
+
                             <p>
                                 Access your learning materials anytime.
                             </p>
                         </div>
+
                     </div>
 
+
                     <div class="auth-point">
-                        <div class="point-icon">✓</div>
+
+                        <div class="point-icon">
+                            ✓
+                        </div>
 
                         <div>
                             <strong>Track Your Progress</strong>
+
                             <p>
                                 Keep track of your lectures and activities.
                             </p>
                         </div>
+
                     </div>
 
+
                     <div class="auth-point">
-                        <div class="point-icon">✓</div>
+
+                        <div class="point-icon">
+                            ✓
+                        </div>
 
                         <div>
                             <strong>Learn From Teachers</strong>
+
                             <p>
                                 Explore courses and learn from qualified teachers.
                             </p>
                         </div>
+
                     </div>
 
                 </div>
+
             </div>
 
         </section>
@@ -90,7 +110,9 @@
 
                 <div class="auth-card-header">
 
-                    <h2>Welcome Back 👋</h2>
+                    <h2>
+                        Welcome Back 👋
+                    </h2>
 
                     <p>
                         Login to your শিক্ষা হাব account
@@ -129,7 +151,11 @@
                                 Password
                             </label>
 
-                            <a href="#" class="forgot-password">
+                            <a
+                                href="#"
+                                class="forgot-password"
+                                onclick="return false;"
+                            >
                                 Forgot Password?
                             </a>
 
@@ -154,6 +180,7 @@
                             <input
                                 type="checkbox"
                                 name="remember"
+                                id="remember"
                             >
 
                             <span>
@@ -169,6 +196,7 @@
                     <button
                         type="submit"
                         class="auth-button"
+                        id="loginButton"
                     >
                         Login
                         <span>→</span>
@@ -179,16 +207,24 @@
 
                 <!-- REGISTER -->
                 <div class="auth-divider">
-                    <span>OR</span>
+
+                    <span>
+                        OR
+                    </span>
+
                 </div>
+
 
                 <div class="register-text">
 
                     <p>
+
                         Don't have an account?
+
                         <a href="register.html">
                             Create Account
                         </a>
+
                     </p>
 
                 </div>
@@ -210,74 +246,224 @@
 
 
     <!-- LOGIN SCRIPT -->
-  <script>
+    <script>
 
-    const loginForm = document.getElementById("loginForm");
+        const loginForm =
+            document.getElementById("loginForm");
 
-    loginForm.addEventListener("submit", async function (event) {
+        const loginButton =
+            document.getElementById("loginButton");
 
-        event.preventDefault();
 
-        const email = document.getElementById("email").value.trim();
-        const password = document.getElementById("password").value;
+        loginForm.addEventListener(
+            "submit",
+            async function (event) {
 
-        try {
+                event.preventDefault();
 
-            const response = await fetch(
-                "http://127.0.0.1:5000/api/auth/login",
-                {
-                    method: "POST",
 
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
+                const email =
+                    document
+                        .getElementById("email")
+                        .value
+                        .trim()
+                        .toLowerCase();
 
-                    body: JSON.stringify({
-                        email: email,
-                        password: password
-                    })
+
+                const password =
+                    document
+                        .getElementById("password")
+                        .value;
+
+
+                if (!email || !password) {
+
+                    alert(
+                        "Please enter your email and password."
+                    );
+
+                    return;
                 }
-            );
 
-            const data = await response.json();
 
-            console.log("Server response:", data);
-            console.log("Status:", response.status);
+                loginButton.disabled = true;
 
-            if (response.ok) {
+                loginButton.innerHTML =
+                    "Logging in...";
 
-                alert("Login successful!");
 
-                localStorage.setItem(
-                    "student",
-                    JSON.stringify(data.student)
-                );
+                try {
 
-                window.location.href =
-                    "student-dashboard.html";
+                    /*
+                     * --------------------------------
+                     * 1. TRY ADMIN LOGIN
+                     * --------------------------------
+                     */
 
-            } else {
+                    const adminResponse =
+                        await fetch(
+                            "http://127.0.0.1:5000/api/admin/auth/login",
+                            {
+                                method: "POST",
 
-                alert(
-                    "Login failed: " +
-                    (data.message || "Unknown error")
-                );
+                                headers: {
+                                    "Content-Type":
+                                        "application/json"
+                                },
+
+                                body: JSON.stringify({
+                                    email: email,
+                                    password: password
+                                })
+                            }
+                        );
+
+
+                    const adminData =
+                        await adminResponse.json();
+
+
+                    /*
+                     * --------------------------------
+                     * ADMIN LOGIN SUCCESS
+                     * --------------------------------
+                     */
+
+                    if (
+                        adminResponse.ok &&
+                        adminData.token &&
+                        adminData.admin
+                    ) {
+
+                        localStorage.setItem(
+                            "adminToken",
+                            adminData.token
+                        );
+
+
+                        localStorage.setItem(
+                            "admin",
+                            JSON.stringify(
+                                adminData.admin
+                            )
+                        );
+
+
+                        alert(
+                            "Admin login successful!"
+                        );
+
+
+                        window.location.href =
+                            "admin-dashboard.html";
+
+
+                        return;
+                    }
+
+
+                    /*
+                     * --------------------------------
+                     * 2. TRY STUDENT LOGIN
+                     * --------------------------------
+                     */
+
+                    const studentResponse =
+                        await fetch(
+                            "http://127.0.0.1:5000/api/auth/login",
+                            {
+                                method: "POST",
+
+                                headers: {
+                                    "Content-Type":
+                                        "application/json"
+                                },
+
+                                body: JSON.stringify({
+                                    email: email,
+                                    password: password
+                                })
+                            }
+                        );
+
+
+                    const studentData =
+                        await studentResponse.json();
+
+
+                    /*
+                     * --------------------------------
+                     * STUDENT LOGIN SUCCESS
+                     * --------------------------------
+                     */
+
+                    if (
+                        studentResponse.ok &&
+                        studentData.student
+                    ) {
+
+                        localStorage.setItem(
+                            "student",
+                            JSON.stringify(
+                                studentData.student
+                            )
+                        );
+
+
+                        alert(
+                            "Login successful!"
+                        );
+
+
+                        window.location.href =
+                            "student-dashboard.html";
+
+
+                        return;
+                    }
+
+
+                    /*
+                     * --------------------------------
+                     * LOGIN FAILED
+                     * --------------------------------
+                     */
+
+                    alert(
+                        "Invalid email or password."
+                    );
+
+                }
+
+
+                catch (error) {
+
+                    console.error(
+                        "Login error:",
+                        error
+                    );
+
+
+                    alert(
+                        "Unable to connect to server. Please try again."
+                    );
+
+                }
+
+
+                finally {
+
+                    loginButton.disabled = false;
+
+                    loginButton.innerHTML =
+                        'Login <span>→</span>';
+
+                }
 
             }
+        );
 
-        } catch (error) {
-
-            console.error("Login error:", error);
-
-            alert(
-                "ERROR: " + error.message
-            );
-
-        }
-
-    });
-
-</script>
+    </script>
 
 </body>
 </html>
